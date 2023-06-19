@@ -20,6 +20,8 @@
 		F963EE1D2A40CD13000BE036 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F963EE1C2A40CD13000BE036 /* Favorites.storyboard */; };
 		F963EE1F2A40CE11000BE036 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F963EE1E2A40CE11000BE036 /* Library.storyboard */; };
 		F963EE212A40CE31000BE036 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F963EE202A40CE31000BE036 /* Search.storyboard */; };
+		F963EE232A40E45C000BE036 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963EE222A40E45C000BE036 /* LibraryViewController.swift */; };
+		F963EE262A40E539000BE036 /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963EE252A40E539000BE036 /* LibraryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		F963EE1C2A40CD13000BE036 /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		F963EE1E2A40CE11000BE036 /* Library.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
 		F963EE202A40CE31000BE036 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		F963EE222A40E45C000BE036 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		F963EE252A40E539000BE036 /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,13 +99,23 @@
 				F963EE0C2A40CC80000BE036 /* ViewController.swift */,
 				F963EE0E2A40CC80000BE036 /* Main.storyboard */,
 				F963EE1C2A40CD13000BE036 /* Favorites.storyboard */,
-				F963EE1E2A40CE11000BE036 /* Library.storyboard */,
+				F963EE242A40E484000BE036 /* LibraryTab */,
 				F963EE202A40CE31000BE036 /* Search.storyboard */,
 				F963EE112A40CC81000BE036 /* Assets.xcassets */,
 				F963EE132A40CC81000BE036 /* LaunchScreen.storyboard */,
 				F963EE162A40CC81000BE036 /* Info.plist */,
 			);
 			path = NanoUIKit;
+			sourceTree = "<group>";
+		};
+		F963EE242A40E484000BE036 /* LibraryTab */ = {
+			isa = PBXGroup;
+			children = (
+				F963EE1E2A40CE11000BE036 /* Library.storyboard */,
+				F963EE222A40E45C000BE036 /* LibraryViewController.swift */,
+				F963EE252A40E539000BE036 /* LibraryTableViewCell.swift */,
+			);
+			path = LibraryTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,9 +196,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F963EE0D2A40CC80000BE036 /* ViewController.swift in Sources */,
+				F963EE232A40E45C000BE036 /* LibraryViewController.swift in Sources */,
 				F963EE092A40CC80000BE036 /* AppDelegate.swift in Sources */,
 				F963EE0B2A40CC80000BE036 /* SceneDelegate.swift in Sources */,
 				B16DBD982A40D9C400779B7C /* MusicService.swift in Sources */,
+				F963EE262A40E539000BE036 /* LibraryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

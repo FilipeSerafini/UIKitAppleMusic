@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B16DBD982A40D9C400779B7C /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16DBD972A40D9C400779B7C /* MusicService.swift */; };
+		B16DBD9D2A40D9D200779B7C /* data-images.json in Resources */ = {isa = PBXBuildFile; fileRef = B16DBD9A2A40D9D200779B7C /* data-images.json */; };
+		B16DBD9E2A40D9D200779B7C /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = B16DBD9B2A40D9D200779B7C /* data.json */; };
+		B16DBD9F2A40D9D200779B7C /* data-with-images.json in Resources */ = {isa = PBXBuildFile; fileRef = B16DBD9C2A40D9D200779B7C /* data-with-images.json */; };
 		F963EE092A40CC80000BE036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963EE082A40CC80000BE036 /* AppDelegate.swift */; };
 		F963EE0B2A40CC80000BE036 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963EE0A2A40CC80000BE036 /* SceneDelegate.swift */; };
 		F963EE0D2A40CC80000BE036 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963EE0C2A40CC80000BE036 /* ViewController.swift */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B16DBD972A40D9C400779B7C /* MusicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicService.swift; sourceTree = "<group>"; };
+		B16DBD9A2A40D9D200779B7C /* data-images.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data-images.json"; sourceTree = "<group>"; };
+		B16DBD9B2A40D9D200779B7C /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		B16DBD9C2A40D9D200779B7C /* data-with-images.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data-with-images.json"; sourceTree = "<group>"; };
 		F963EE052A40CC80000BE036 /* NanoUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F963EE082A40CC80000BE036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F963EE0A2A40CC80000BE036 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +51,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B16DBD962A40D9C400779B7C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B16DBD972A40D9C400779B7C /* MusicService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B16DBD992A40D9D200779B7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B16DBD9A2A40D9D200779B7C /* data-images.json */,
+				B16DBD9B2A40D9D200779B7C /* data.json */,
+				B16DBD9C2A40D9D200779B7C /* data-with-images.json */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F963EDFC2A40CC80000BE036 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +88,8 @@
 		F963EE072A40CC80000BE036 /* NanoUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				B16DBD992A40D9D200779B7C /* Model */,
+				B16DBD962A40D9C400779B7C /* Service */,
 				F963EE082A40CC80000BE036 /* AppDelegate.swift */,
 				F963EE0A2A40CC80000BE036 /* SceneDelegate.swift */,
 				F963EE0C2A40CC80000BE036 /* ViewController.swift */,
@@ -137,9 +165,12 @@
 				F963EE152A40CC81000BE036 /* LaunchScreen.storyboard in Resources */,
 				F963EE122A40CC81000BE036 /* Assets.xcassets in Resources */,
 				F963EE1F2A40CE11000BE036 /* Library.storyboard in Resources */,
+				B16DBD9E2A40D9D200779B7C /* data.json in Resources */,
 				F963EE1D2A40CD13000BE036 /* Favorites.storyboard in Resources */,
 				F963EE212A40CE31000BE036 /* Search.storyboard in Resources */,
+				B16DBD9D2A40D9D200779B7C /* data-images.json in Resources */,
 				F963EE102A40CC80000BE036 /* Main.storyboard in Resources */,
+				B16DBD9F2A40D9D200779B7C /* data-with-images.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +184,7 @@
 				F963EE0D2A40CC80000BE036 /* ViewController.swift in Sources */,
 				F963EE092A40CC80000BE036 /* AppDelegate.swift in Sources */,
 				F963EE0B2A40CC80000BE036 /* SceneDelegate.swift in Sources */,
+				B16DBD982A40D9C400779B7C /* MusicService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

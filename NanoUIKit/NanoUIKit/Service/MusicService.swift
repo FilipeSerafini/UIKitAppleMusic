@@ -124,6 +124,10 @@ struct Queue {
 
 // MARK: - MusicService
 final class MusicService {
+    
+    //We used singleton.
+    static let singleton: MusicService = try! MusicService()
+    
     //MARK: Variables Setup
     private let allMusics: [Music]
     private var collections: Set<MusicCollection>
@@ -150,7 +154,7 @@ final class MusicService {
     ///
     /// Loads data from the json files. Method may `throws` due to I/O errors.
     ///
-    init() throws {
+    private init() throws {
         // may the superior entity (if such exists) forgive me for such terrible practice :'//
         let mockDataUrl = Bundle.main.url(forResource: "data", withExtension: "json")!
         let data = try Data(contentsOf: mockDataUrl)

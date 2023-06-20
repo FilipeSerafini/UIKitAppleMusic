@@ -15,6 +15,8 @@
 		B16DBDA32A40E4E600779B7C /* MusicXibController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16DBDA22A40E4E600779B7C /* MusicXibController.swift */; };
 		B16DBDA62A40E9B900779B7C /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16DBDA52A40E9B900779B7C /* FavoritesViewController.swift */; };
 		B1704B692A422756006334ED /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1704B682A422756006334ED /* Favorites.storyboard */; };
+		B1C4283B2A422B8D003E7727 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C4283A2A422B8D003E7727 /* Library.storyboard */; };
+		B1C4283D2A422B95003E7727 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C4283C2A422B95003E7727 /* Search.storyboard */; };
 		B1EC5D5E2A40EC320038A7FB /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EC5D5C2A40EC320038A7FB /* FavoritesTableViewCell.swift */; };
 		B1EC5D5F2A40EC320038A7FB /* FavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1EC5D5D2A40EC320038A7FB /* FavoritesTableViewCell.xib */; };
 		F924809C2A4200530028ADDC /* LibraryPlaylistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F924809B2A4200530028ADDC /* LibraryPlaylistsViewController.swift */; };
@@ -40,6 +42,8 @@
 		B16DBDA22A40E4E600779B7C /* MusicXibController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicXibController.swift; sourceTree = "<group>"; };
 		B16DBDA52A40E9B900779B7C /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		B1704B682A422756006334ED /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		B1C4283A2A422B8D003E7727 /* Library.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Library.storyboard; path = ../../../../../../Downloads/story/Library.storyboard; sourceTree = "<group>"; };
+		B1C4283C2A422B95003E7727 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Search.storyboard; path = ../../../../../../Downloads/story/Search.storyboard; sourceTree = "<group>"; };
 		B1EC5D5C2A40EC320038A7FB /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoritesTableViewCell.swift; path = NanoUIKit/FavoritesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		B1EC5D5D2A40EC320038A7FB /* FavoritesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FavoritesTableViewCell.xib; path = NanoUIKit/FavoritesTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		F924809B2A4200530028ADDC /* LibraryPlaylistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPlaylistsViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 		F92480A12A4200E00028ADDC /* SearchTab */ = {
 			isa = PBXGroup;
 			children = (
+				B1C4283C2A422B95003E7727 /* Search.storyboard */,
 				F92480A22A42018B0028ADDC /* SearchViewController.swift */,
 			);
 			path = SearchTab;
@@ -154,6 +159,7 @@
 		F963EE242A40E484000BE036 /* LibraryTab */ = {
 			isa = PBXGroup;
 			children = (
+				B1C4283A2A422B8D003E7727 /* Library.storyboard */,
 				F963EE222A40E45C000BE036 /* LibraryViewController.swift */,
 				F963EE252A40E539000BE036 /* LibraryTableViewCell.swift */,
 				F924809B2A4200530028ADDC /* LibraryPlaylistsViewController.swift */,
@@ -223,10 +229,12 @@
 			files = (
 				B1EC5D5F2A40EC320038A7FB /* FavoritesTableViewCell.xib in Resources */,
 				F963EE152A40CC81000BE036 /* LaunchScreen.storyboard in Resources */,
+				B1C4283B2A422B8D003E7727 /* Library.storyboard in Resources */,
 				F963EE122A40CC81000BE036 /* Assets.xcassets in Resources */,
 				B16DBD9E2A40D9D200779B7C /* data.json in Resources */,
 				B1704B692A422756006334ED /* Favorites.storyboard in Resources */,
 				B16DBD9D2A40D9D200779B7C /* data-images.json in Resources */,
+				B1C4283D2A422B95003E7727 /* Search.storyboard in Resources */,
 				B16DBDA12A40DF4D00779B7C /* MusicXib.xib in Resources */,
 				F963EE102A40CC80000BE036 /* Main.storyboard in Resources */,
 				B16DBD9F2A40D9D200779B7C /* data-with-images.json in Resources */,

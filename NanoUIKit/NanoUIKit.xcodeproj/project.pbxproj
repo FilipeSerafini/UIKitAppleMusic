@@ -15,6 +15,7 @@
 		F924809E2A4200730028ADDC /* LibrarySongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F924809D2A4200730028ADDC /* LibrarySongsViewController.swift */; };
 		F92480A02A4200830028ADDC /* LibraryArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F924809F2A4200830028ADDC /* LibraryArtistsViewController.swift */; };
 		F92480A32A42018B0028ADDC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92480A22A42018B0028ADDC /* SearchViewController.swift */; };
+		F92480AB2A4225FF0028ADDC /* ChosenPlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92480AA2A4225FF0028ADDC /* ChosenPlaylistViewController.swift */; };
 		F963EE092A40CC80000BE036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963EE082A40CC80000BE036 /* AppDelegate.swift */; };
 		F963EE0B2A40CC80000BE036 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963EE0A2A40CC80000BE036 /* SceneDelegate.swift */; };
 		F963EE0D2A40CC80000BE036 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963EE0C2A40CC80000BE036 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 		F924809D2A4200730028ADDC /* LibrarySongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrarySongsViewController.swift; sourceTree = "<group>"; };
 		F924809F2A4200830028ADDC /* LibraryArtistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryArtistsViewController.swift; sourceTree = "<group>"; };
 		F92480A22A42018B0028ADDC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F92480AA2A4225FF0028ADDC /* ChosenPlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenPlaylistViewController.swift; sourceTree = "<group>"; };
 		F963EE052A40CC80000BE036 /* NanoUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F963EE082A40CC80000BE036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F963EE0A2A40CC80000BE036 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,40 @@
 			path = SearchTab;
 			sourceTree = "<group>";
 		};
+		F92480A62A4210B30028ADDC /* LibraryMainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F963EE222A40E45C000BE036 /* LibraryViewController.swift */,
+				F963EE252A40E539000BE036 /* LibraryTableViewCell.swift */,
+			);
+			path = LibraryMainScreen;
+			sourceTree = "<group>";
+		};
+		F92480A72A4210BF0028ADDC /* LibraryPlaylist */ = {
+			isa = PBXGroup;
+			children = (
+				F924809B2A4200530028ADDC /* LibraryPlaylistsViewController.swift */,
+				F92480AA2A4225FF0028ADDC /* ChosenPlaylistViewController.swift */,
+			);
+			path = LibraryPlaylist;
+			sourceTree = "<group>";
+		};
+		F92480A82A4210C80028ADDC /* LibraryArtists */ = {
+			isa = PBXGroup;
+			children = (
+				F924809F2A4200830028ADDC /* LibraryArtistsViewController.swift */,
+			);
+			path = LibraryArtists;
+			sourceTree = "<group>";
+		};
+		F92480A92A4210D20028ADDC /* LibrarySongs */ = {
+			isa = PBXGroup;
+			children = (
+				F924809D2A4200730028ADDC /* LibrarySongsViewController.swift */,
+			);
+			path = LibrarySongs;
+			sourceTree = "<group>";
+		};
 		F963EDFC2A40CC80000BE036 = {
 			isa = PBXGroup;
 			children = (
@@ -129,11 +165,10 @@
 			isa = PBXGroup;
 			children = (
 				F963EE1E2A40CE11000BE036 /* Library.storyboard */,
-				F963EE222A40E45C000BE036 /* LibraryViewController.swift */,
-				F963EE252A40E539000BE036 /* LibraryTableViewCell.swift */,
-				F924809B2A4200530028ADDC /* LibraryPlaylistsViewController.swift */,
-				F924809F2A4200830028ADDC /* LibraryArtistsViewController.swift */,
-				F924809D2A4200730028ADDC /* LibrarySongsViewController.swift */,
+				F92480A62A4210B30028ADDC /* LibraryMainScreen */,
+				F92480A72A4210BF0028ADDC /* LibraryPlaylist */,
+				F92480A82A4210C80028ADDC /* LibraryArtists */,
+				F92480A92A4210D20028ADDC /* LibrarySongs */,
 			);
 			path = LibraryTab;
 			sourceTree = "<group>";
@@ -215,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F92480AB2A4225FF0028ADDC /* ChosenPlaylistViewController.swift in Sources */,
 				F92480A32A42018B0028ADDC /* SearchViewController.swift in Sources */,
 				F963EE0D2A40CC80000BE036 /* ViewController.swift in Sources */,
 				F963EE232A40E45C000BE036 /* LibraryViewController.swift in Sources */,

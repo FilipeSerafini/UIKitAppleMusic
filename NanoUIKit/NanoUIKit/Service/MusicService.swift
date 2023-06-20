@@ -22,6 +22,30 @@ struct Music: Hashable, Decodable {
     }
 }
 
+//MARK: - MusicCollectionCategory
+enum MusicCollectionCategory: CaseIterable {
+    case spatialAudio
+    case pop
+    case metal
+    case hits
+    case brazillianPop
+    
+    var description: String {
+        switch self {
+            case .spatialAudio:
+                return "Spatial Audio"
+            case .pop:
+                return "Pop"
+            case .metal:
+                return "Metal"
+            case .hits:
+                return "Hits"
+            case .brazillianPop:
+                return "Brazillian Pop"
+        }
+    }
+}
+
 // MARK: - MusicCollectionType
 enum MusicCollectionType: String, Decodable, CaseIterable {
     /// Music collection types and variations
@@ -100,6 +124,10 @@ struct Queue {
 
 // MARK: - MusicService
 final class MusicService {
+    
+    //We used singleton.
+    static let singleton: MusicService = try! MusicService()
+    
     //MARK: Variables Setup
     private let allMusics: [Music]
     private var collections: Set<MusicCollection>
@@ -126,7 +154,7 @@ final class MusicService {
     ///
     /// Loads data from the json files. Method may `throws` due to I/O errors.
     ///
-    init() throws {
+    private init() throws {
         // may the superior entity (if such exists) forgive me for such terrible practice :'//
         let mockDataUrl = Bundle.main.url(forResource: "data", withExtension: "json")!
         let data = try Data(contentsOf: mockDataUrl)
@@ -243,7 +271,7 @@ final class MusicService {
     ///
     /// - Parameters:
     ///   - music: The music to be removed from queue
-    ///   
+    ///
     func removeFromQueue(music: Music) {
         queue.nextInCollection.removeAll { $0 == music }
         queue.nextSuggested.removeAll { $0 == music }

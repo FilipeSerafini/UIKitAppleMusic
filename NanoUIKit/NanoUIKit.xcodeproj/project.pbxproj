@@ -11,6 +11,12 @@
 		B16DBD9D2A40D9D200779B7C /* data-images.json in Resources */ = {isa = PBXBuildFile; fileRef = B16DBD9A2A40D9D200779B7C /* data-images.json */; };
 		B16DBD9E2A40D9D200779B7C /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = B16DBD9B2A40D9D200779B7C /* data.json */; };
 		B16DBD9F2A40D9D200779B7C /* data-with-images.json in Resources */ = {isa = PBXBuildFile; fileRef = B16DBD9C2A40D9D200779B7C /* data-with-images.json */; };
+		B16DBDA12A40DF4D00779B7C /* MusicXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = B16DBDA02A40DF4D00779B7C /* MusicXib.xib */; };
+		B16DBDA32A40E4E600779B7C /* MusicXibController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16DBDA22A40E4E600779B7C /* MusicXibController.swift */; };
+		B16DBDA62A40E9B900779B7C /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16DBDA52A40E9B900779B7C /* FavoritesViewController.swift */; };
+		B1704B692A422756006334ED /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1704B682A422756006334ED /* Favorites.storyboard */; };
+		B1EC5D5E2A40EC320038A7FB /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EC5D5C2A40EC320038A7FB /* FavoritesTableViewCell.swift */; };
+		B1EC5D5F2A40EC320038A7FB /* FavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1EC5D5D2A40EC320038A7FB /* FavoritesTableViewCell.xib */; };
 		F924809C2A4200530028ADDC /* LibraryPlaylistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F924809B2A4200530028ADDC /* LibraryPlaylistsViewController.swift */; };
 		F924809E2A4200730028ADDC /* LibrarySongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F924809D2A4200730028ADDC /* LibrarySongsViewController.swift */; };
 		F92480A02A4200830028ADDC /* LibraryArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F924809F2A4200830028ADDC /* LibraryArtistsViewController.swift */; };
@@ -21,7 +27,6 @@
 		F963EE102A40CC80000BE036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F963EE0E2A40CC80000BE036 /* Main.storyboard */; };
 		F963EE122A40CC81000BE036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F963EE112A40CC81000BE036 /* Assets.xcassets */; };
 		F963EE152A40CC81000BE036 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F963EE132A40CC81000BE036 /* LaunchScreen.storyboard */; };
-		F963EE1D2A40CD13000BE036 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F963EE1C2A40CD13000BE036 /* Favorites.storyboard */; };
 		F963EE232A40E45C000BE036 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963EE222A40E45C000BE036 /* LibraryViewController.swift */; };
 		F963EE262A40E539000BE036 /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963EE252A40E539000BE036 /* LibraryTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +36,12 @@
 		B16DBD9A2A40D9D200779B7C /* data-images.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data-images.json"; sourceTree = "<group>"; };
 		B16DBD9B2A40D9D200779B7C /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		B16DBD9C2A40D9D200779B7C /* data-with-images.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data-with-images.json"; sourceTree = "<group>"; };
+		B16DBDA02A40DF4D00779B7C /* MusicXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicXib.xib; sourceTree = "<group>"; };
+		B16DBDA22A40E4E600779B7C /* MusicXibController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicXibController.swift; sourceTree = "<group>"; };
+		B16DBDA52A40E9B900779B7C /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		B1704B682A422756006334ED /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		B1EC5D5C2A40EC320038A7FB /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoritesTableViewCell.swift; path = NanoUIKit/FavoritesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		B1EC5D5D2A40EC320038A7FB /* FavoritesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FavoritesTableViewCell.xib; path = NanoUIKit/FavoritesTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		F924809B2A4200530028ADDC /* LibraryPlaylistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPlaylistsViewController.swift; sourceTree = "<group>"; };
 		F924809D2A4200730028ADDC /* LibrarySongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrarySongsViewController.swift; sourceTree = "<group>"; };
 		F924809F2A4200830028ADDC /* LibraryArtistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryArtistsViewController.swift; sourceTree = "<group>"; };
@@ -43,7 +54,6 @@
 		F963EE112A40CC81000BE036 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F963EE142A40CC81000BE036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F963EE162A40CC81000BE036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F963EE1C2A40CD13000BE036 /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		F963EE222A40E45C000BE036 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		F963EE252A40E539000BE036 /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +87,26 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B16DBDA42A40E98000779B7C /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				B1704B682A422756006334ED /* Favorites.storyboard */,
+				B1EC5D5C2A40EC320038A7FB /* FavoritesTableViewCell.swift */,
+				B1EC5D5D2A40EC320038A7FB /* FavoritesTableViewCell.xib */,
+				B16DBDA52A40E9B900779B7C /* FavoritesViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		B16DBDA72A40E9EF00779B7C /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				B16DBDA22A40E4E600779B7C /* MusicXibController.swift */,
+				B16DBDA02A40DF4D00779B7C /* MusicXib.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
 		F92480A12A4200E00028ADDC /* SearchTab */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,13 +134,14 @@
 		F963EE072A40CC80000BE036 /* NanoUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				B16DBDA72A40E9EF00779B7C /* Xibs */,
+				B16DBDA42A40E98000779B7C /* Favorites */,
 				B16DBD992A40D9D200779B7C /* Model */,
 				B16DBD962A40D9C400779B7C /* Service */,
 				F963EE082A40CC80000BE036 /* AppDelegate.swift */,
 				F963EE0A2A40CC80000BE036 /* SceneDelegate.swift */,
 				F963EE0C2A40CC80000BE036 /* ViewController.swift */,
 				F963EE0E2A40CC80000BE036 /* Main.storyboard */,
-				F963EE1C2A40CD13000BE036 /* Favorites.storyboard */,
 				F963EE242A40E484000BE036 /* LibraryTab */,
 				F92480A12A4200E00028ADDC /* SearchTab */,
 				F963EE112A40CC81000BE036 /* Assets.xcassets */,
@@ -190,11 +221,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1EC5D5F2A40EC320038A7FB /* FavoritesTableViewCell.xib in Resources */,
 				F963EE152A40CC81000BE036 /* LaunchScreen.storyboard in Resources */,
 				F963EE122A40CC81000BE036 /* Assets.xcassets in Resources */,
 				B16DBD9E2A40D9D200779B7C /* data.json in Resources */,
-				F963EE1D2A40CD13000BE036 /* Favorites.storyboard in Resources */,
+				B1704B692A422756006334ED /* Favorites.storyboard in Resources */,
 				B16DBD9D2A40D9D200779B7C /* data-images.json in Resources */,
+				B16DBDA12A40DF4D00779B7C /* MusicXib.xib in Resources */,
 				F963EE102A40CC80000BE036 /* Main.storyboard in Resources */,
 				B16DBD9F2A40D9D200779B7C /* data-with-images.json in Resources */,
 			);
@@ -208,11 +241,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F92480A32A42018B0028ADDC /* SearchViewController.swift in Sources */,
+				B16DBDA32A40E4E600779B7C /* MusicXibController.swift in Sources */,
 				F963EE0D2A40CC80000BE036 /* ViewController.swift in Sources */,
 				F963EE232A40E45C000BE036 /* LibraryViewController.swift in Sources */,
 				F924809E2A4200730028ADDC /* LibrarySongsViewController.swift in Sources */,
 				F963EE092A40CC80000BE036 /* AppDelegate.swift in Sources */,
 				F963EE0B2A40CC80000BE036 /* SceneDelegate.swift in Sources */,
+				B1EC5D5E2A40EC320038A7FB /* FavoritesTableViewCell.swift in Sources */,
+				B16DBDA62A40E9B900779B7C /* FavoritesViewController.swift in Sources */,
 				B16DBD982A40D9C400779B7C /* MusicService.swift in Sources */,
 				F92480A02A4200830028ADDC /* LibraryArtistsViewController.swift in Sources */,
 				F924809C2A4200530028ADDC /* LibraryPlaylistsViewController.swift in Sources */,

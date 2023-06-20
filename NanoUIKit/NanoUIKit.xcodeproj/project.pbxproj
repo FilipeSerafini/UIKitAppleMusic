@@ -270,6 +270,7 @@
 				B1704B692A422756006334ED /* Favorites.storyboard in Resources */,
 				B16DBD9D2A40D9D200779B7C /* data-images.json in Resources */,
 				B16DBDA12A40DF4D00779B7C /* MusicXib.xib in Resources */,
+				B159B5422A4230FF00436E7E /* Search.storyboard in Resources */,
 				F963EE102A40CC80000BE036 /* Main.storyboard in Resources */,
 				F92480BB2A422F9D0028ADDC /* Library.storyboard in Resources */,
 				B159B5442A423B4D00436E7E /* Search.storyboard in Resources */,

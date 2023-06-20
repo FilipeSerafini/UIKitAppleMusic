@@ -198,7 +198,8 @@ final class MusicService {
     ///
     /// If the ID is invalid or does not match any record, `nil` is returned.
     ///
-    func getAllCollection(withType: MusicCollectionType) -> [MusicCollection]ter {
+    func getAllCollection(withType: MusicCollectionType) -> [MusicCollection] {
+
         return collections.filter{ music in
             return music.type == withType}
     }

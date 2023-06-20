@@ -189,6 +189,23 @@ final class MusicService {
         collections.first { $0.id == id }
     }
     
+<<<<<<< Updated upstream
+=======
+    /// Retrieves a music collection upon a given collection ID
+    ///
+    /// - Parameters:
+    ///     - id: The id of the collection to be retrived
+    ///
+    /// - Returns: A music collection matching the given ID
+    ///
+    /// If the ID is invalid or does not match any record, `nil` is returned.
+    ///
+    func getAllCollection(withType: MusicCollectionType) -> [MusicCollection] {
+        return collections.filter{ music in
+            return music.type == withType}
+    }
+    
+>>>>>>> Stashed changes
     /// Retrieves all songs available
     ///
     /// - Returns: An array of music contaning all available songs

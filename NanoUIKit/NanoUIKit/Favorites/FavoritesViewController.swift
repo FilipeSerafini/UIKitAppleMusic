@@ -41,7 +41,7 @@ extension FavoritesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesCell", for: indexPath) as! FavoritesTableViewCell
-        cell.type = .favorite
+        cell.type = .normal
         
         
         

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B159B5422A4230FF00436E7E /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B159B5412A4230FF00436E7E /* Search.storyboard */; };
 		B16DBD982A40D9C400779B7C /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16DBD972A40D9C400779B7C /* MusicService.swift */; };
 		B16DBD9D2A40D9D200779B7C /* data-images.json in Resources */ = {isa = PBXBuildFile; fileRef = B16DBD9A2A40D9D200779B7C /* data-images.json */; };
 		B16DBD9E2A40D9D200779B7C /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = B16DBD9B2A40D9D200779B7C /* data.json */; };
@@ -21,6 +22,13 @@
 		F924809E2A4200730028ADDC /* LibrarySongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F924809D2A4200730028ADDC /* LibrarySongsViewController.swift */; };
 		F92480A02A4200830028ADDC /* LibraryArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F924809F2A4200830028ADDC /* LibraryArtistsViewController.swift */; };
 		F92480A32A42018B0028ADDC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92480A22A42018B0028ADDC /* SearchViewController.swift */; };
+		F92480BB2A422F9D0028ADDC /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92480B02A422F9D0028ADDC /* Library.storyboard */; };
+		F92480BC2A422F9D0028ADDC /* LibraryPlaylistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92480B22A422F9D0028ADDC /* LibraryPlaylistsViewController.swift */; };
+		F92480BD2A422F9D0028ADDC /* ChosenPlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92480B32A422F9D0028ADDC /* ChosenPlaylistViewController.swift */; };
+		F92480BE2A422F9D0028ADDC /* LibrarySongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92480B52A422F9D0028ADDC /* LibrarySongsViewController.swift */; };
+		F92480BF2A422F9D0028ADDC /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92480B72A422F9D0028ADDC /* LibraryViewController.swift */; };
+		F92480C02A422F9D0028ADDC /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92480B82A422F9D0028ADDC /* LibraryTableViewCell.swift */; };
+		F92480C12A422F9D0028ADDC /* LibraryArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92480BA2A422F9D0028ADDC /* LibraryArtistsViewController.swift */; };
 		F963EE092A40CC80000BE036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963EE082A40CC80000BE036 /* AppDelegate.swift */; };
 		F963EE0B2A40CC80000BE036 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963EE0A2A40CC80000BE036 /* SceneDelegate.swift */; };
 		F963EE0D2A40CC80000BE036 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963EE0C2A40CC80000BE036 /* ViewController.swift */; };
@@ -32,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B159B5412A4230FF00436E7E /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Search.storyboard; path = ../../../../../../Downloads/story/Search.storyboard; sourceTree = "<group>"; };
 		B16DBD972A40D9C400779B7C /* MusicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicService.swift; sourceTree = "<group>"; };
 		B16DBD9A2A40D9D200779B7C /* data-images.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data-images.json"; sourceTree = "<group>"; };
 		B16DBD9B2A40D9D200779B7C /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
@@ -46,6 +55,13 @@
 		F924809D2A4200730028ADDC /* LibrarySongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrarySongsViewController.swift; sourceTree = "<group>"; };
 		F924809F2A4200830028ADDC /* LibraryArtistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryArtistsViewController.swift; sourceTree = "<group>"; };
 		F92480A22A42018B0028ADDC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F92480B02A422F9D0028ADDC /* Library.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
+		F92480B22A422F9D0028ADDC /* LibraryPlaylistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryPlaylistsViewController.swift; sourceTree = "<group>"; };
+		F92480B32A422F9D0028ADDC /* ChosenPlaylistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChosenPlaylistViewController.swift; sourceTree = "<group>"; };
+		F92480B52A422F9D0028ADDC /* LibrarySongsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibrarySongsViewController.swift; sourceTree = "<group>"; };
+		F92480B72A422F9D0028ADDC /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		F92480B82A422F9D0028ADDC /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
+		F92480BA2A422F9D0028ADDC /* LibraryArtistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryArtistsViewController.swift; sourceTree = "<group>"; };
 		F963EE052A40CC80000BE036 /* NanoUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F963EE082A40CC80000BE036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F963EE0A2A40CC80000BE036 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +126,7 @@
 		F92480A12A4200E00028ADDC /* SearchTab */ = {
 			isa = PBXGroup;
 			children = (
+				B159B5412A4230FF00436E7E /* Search.storyboard */,
 				F92480A22A42018B0028ADDC /* SearchViewController.swift */,
 			);
 			path = SearchTab;
@@ -228,6 +245,7 @@
 				B1704B692A422756006334ED /* Favorites.storyboard in Resources */,
 				B16DBD9D2A40D9D200779B7C /* data-images.json in Resources */,
 				B16DBDA12A40DF4D00779B7C /* MusicXib.xib in Resources */,
+				B159B5422A4230FF00436E7E /* Search.storyboard in Resources */,
 				F963EE102A40CC80000BE036 /* Main.storyboard in Resources */,
 				B16DBD9F2A40D9D200779B7C /* data-with-images.json in Resources */,
 			);

@@ -197,8 +197,18 @@
                             <constraint firstItem="K8G-zU-rTq" firstAttribute="leading" secondItem="IBh-pX-hKc" secondAttribute="leading" constant="16" id="sJP-mX-OJf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="AmZ-Tu-4TO"/>
+                    <navigationItem key="navigationItem" id="AmZ-Tu-4TO">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="ellipsis.circle" catalog="system" id="VEo-Hb-k9T">
+                                <color key="tintColor" name="AccentColor"/>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="plus.circle.fill" catalog="system" id="dhk-AW-biB">
+                                <color key="tintColor" name="AccentColor"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
+                        <outlet property="imageCover" destination="cwR-o3-YJB" id="oW8-wD-vGm"/>
                         <outlet property="playButton" destination="T7B-to-cyI" id="fAD-cv-hu3"/>
                         <outlet property="playlistTableView" destination="ssg-5d-t3O" id="DdU-h8-Y9b"/>
                     </connections>
@@ -298,9 +308,11 @@
     <resources>
         <image name="0EDlULDWMq7mUhj28tvkol" width="640" height="640"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="ellipsis.circle" catalog="system" width="128" height="123"/>
         <image name="music.note" catalog="system" width="96" height="128"/>
         <image name="music.note.list" catalog="system" width="128" height="115"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.17599999904632568" blue="0.33300000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

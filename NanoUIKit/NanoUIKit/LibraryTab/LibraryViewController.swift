@@ -36,4 +36,16 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch data[indexPath.row]{
+        case .playlist:
+            performSegue(withIdentifier: "libraryPlaylistSegue", sender: self)
+        case .artists:
+            performSegue(withIdentifier: "libraryArtistsSegue", sender: self)
+        case .songs:
+            performSegue(withIdentifier: "librarySongsSegue", sender: self)
+        default:
+            break
+        }
+    }
 }

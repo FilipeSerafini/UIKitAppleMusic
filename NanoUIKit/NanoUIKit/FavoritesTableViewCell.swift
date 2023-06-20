@@ -17,13 +17,13 @@ class FavoritesTableViewCell: UITableViewCell {
     @IBOutlet weak var musicName: UILabel!
     @IBOutlet weak var groupName: UILabel!
     
-    @IBOutlet weak var rightButton: UIButton!
+    @IBOutlet weak var rightButton: UIImageView!
     
     @IBOutlet weak var musicImage: UIImageView!
     
     var type: CellType = .normal {
         didSet {
-            rightButton.imageView?.image = UIImage(systemName: type == .normal ? "chevron.right" : "heart.fill")?.withTintColor(type == .normal ? .gray : UIColor(named: "AccentColor")!)
+            rightButton.image = UIImage(systemName: type == .normal ? "chevron.right" : "heart.fill")?.withTintColor(type == .normal ? .gray : UIColor(named: "AccentColor")!)
             
         }
     }
@@ -31,6 +31,7 @@ class FavoritesTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        musicImage.layer.cornerRadius = 8
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

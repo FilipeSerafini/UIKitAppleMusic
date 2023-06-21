@@ -11,6 +11,7 @@ class ChosenPlaylistViewController: UIViewController, UITableViewDelegate, UITab
 
     @IBOutlet weak var imageCover: UIImageView!
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var shuffleButton: UIButton!
     @IBOutlet weak var playlistTableView: UITableView!
     @IBOutlet weak var playlistTitleLabel: UILabel!
     
@@ -20,8 +21,7 @@ class ChosenPlaylistViewController: UIViewController, UITableViewDelegate, UITab
         super.viewDidLoad()
         if let chosenPlaylist = playlistData{
             imageCover.image = UIImage(named: chosenPlaylist.id)
-            imageCover.layer.cornerRadius = 20
-            imageCover.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
+            imageCover.cornerRadius(20, forCorners: [.all])
             
             playlistTitleLabel.text = chosenPlaylist.title
         }
@@ -32,7 +32,8 @@ class ChosenPlaylistViewController: UIViewController, UITableViewDelegate, UITab
 //            .cgColor
 //        imageCover.layer.masksToBounds = false
         
-        playButton.layer.cornerRadius = 5
+        playButton.cornerRadius(12, forCorners: [.all])
+        shuffleButton.cornerRadius(12, forCorners: [.all])
         
         playlistTableView.dataSource = self
         playlistTableView.delegate = self

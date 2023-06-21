@@ -11,11 +11,18 @@ class FavoritesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var musics: [Music] = MusicService.singleton.getAllMusics()
+    var favorites: [Music] = MusicService.singleton.favoriteMusics
+//    favorites.append(musics[2])
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.register(UINib(nibName: "FavoritesTableViewCell", bundle: .main), forCellReuseIdentifier: "FavoritesCell")
+        if (!musics.isEmpty) {
+            tableView.dataSource = self
+            tableView.register(UINib(nibName: "FavoritesTableViewCell", bundle: .main), forCellReuseIdentifier: "FavoritesCell")
+            tableView.isHidden = false
+        }
+        
         // Do any additional setup after loading the view.
     }
     
@@ -36,13 +43,18 @@ class FavoritesViewController: UIViewController {
 extension FavoritesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return musics.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let music = musics[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesCell", for: indexPath) as! FavoritesTableViewCell
         cell.type = .normal
         
+        cell.musicName.text = music.title
+        cell.groupName.text = music.artist
+        cell.musicImage.image = UIImage(named: music.id)
         
         
         

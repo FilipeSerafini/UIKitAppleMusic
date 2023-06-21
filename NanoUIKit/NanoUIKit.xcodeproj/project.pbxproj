@@ -132,10 +132,10 @@
 			isa = PBXGroup;
 			children = (
 				F92480B02A422F9D0028ADDC /* Library.storyboard */,
-				F92480B12A422F9D0028ADDC /* LibraryPlaylist */,
-				F92480B42A422F9D0028ADDC /* LibrarySongs */,
 				F92480B62A422F9D0028ADDC /* LibraryMainScreen */,
+				F92480B12A422F9D0028ADDC /* LibraryPlaylist */,
 				F92480B92A422F9D0028ADDC /* LibraryArtists */,
+				F92480B42A422F9D0028ADDC /* LibrarySongs */,
 			);
 			name = LibraryTab;
 			path = SearchTab/LibraryTab;

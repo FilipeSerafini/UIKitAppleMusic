@@ -11,8 +11,7 @@ class LibraryPlaylistsViewController: UIViewController, UITableViewDelegate, UIT
 
     @IBOutlet weak var playlistsTab: UITableView!
     
-    //mocado pois tem alguns prob hj
-    var playlistsData: [MusicCollection] = MusicService.singleton.getAllCollection(withType: .playlist)
+    var playlistsData: [MusicCollection] = MusicService.singleton.loadLibrary()
     
     //Quando seleciona uma collection, muda essa propriedade e manda ela pela segue
     var playListToSend: MusicCollection?

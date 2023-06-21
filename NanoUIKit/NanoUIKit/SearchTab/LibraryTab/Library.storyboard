@@ -217,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHb-cj-jfo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3835.8778625954196" y="-819.0140845070423"/>
+            <point key="canvasLocation" x="5086" y="-261"/>
         </scene>
         <!--Songs-->
         <scene sceneID="sME-L4-0o2">
@@ -272,9 +272,12 @@
                             <constraint firstItem="7ZS-eV-qSB" firstAttribute="top" secondItem="KvV-i9-kH5" secondAttribute="top" id="upO-FQ-CPC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Artists" largeTitleDisplayMode="never" id="eqz-WC-YNO"/>
+                    <navigationItem key="navigationItem" title="Artists" largeTitleDisplayMode="never" id="eqz-WC-YNO">
+                        <barButtonItem key="backBarButtonItem" title=" " id="21G-Ro-vYy"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="artistsTableView" destination="7ZS-eV-qSB" id="qux-iY-DiA"/>
+                        <segue destination="Zp3-ex-bao" kind="show" identifier="artistsPlaylistSegue" id="hrX-l1-GnD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0cC-gL-OXr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -307,6 +310,9 @@
             <point key="canvasLocation" x="-5.343511450381679" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hrX-l1-GnD"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="0EDlULDWMq7mUhj28tvkol" width="640" height="640"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>

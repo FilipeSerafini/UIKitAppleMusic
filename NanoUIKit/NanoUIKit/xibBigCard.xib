@@ -17,14 +17,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spatial Audio" translatesAutoresizingMaskIntoConstraints="NO" id="JjO-GV-OV1">
-                        <rect key="frame" x="16" y="16" width="318" height="138"/>
+                        <rect key="frame" x="16" y="8" width="318" height="154"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="JjO-GV-OV1" secondAttribute="height" multiplier="53:23" id="EcH-EM-s86"/>
-                            <constraint firstAttribute="height" constant="138" id="H8t-ha-6o1"/>
+                            <constraint firstAttribute="width" secondItem="JjO-GV-OV1" secondAttribute="height" multiplier="159:77" id="CWu-uS-wFd"/>
+                            <constraint firstAttribute="height" constant="154" id="fu3-zj-aHw"/>
                         </constraints>
                     </imageView>
                     <view alpha="0.34999999999999998" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="vl2-iK-PEh">
-                        <rect key="frame" x="16" y="16" width="318" height="138"/>
+                        <rect key="frame" x="16" y="8" width="318" height="154"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Weeknd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oaw-MA-bFE">
@@ -38,12 +38,12 @@
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="Oaw-MA-bFE" secondAttribute="bottom" constant="16" id="17x-nn-wi9"/>
                     <constraint firstAttribute="trailing" secondItem="vl2-iK-PEh" secondAttribute="trailing" constant="16" id="8pJ-kd-qhy"/>
-                    <constraint firstAttribute="bottom" secondItem="JjO-GV-OV1" secondAttribute="bottom" constant="16" id="AJw-Qj-XT0"/>
+                    <constraint firstAttribute="bottom" secondItem="JjO-GV-OV1" secondAttribute="bottom" constant="8" id="AJw-Qj-XT0"/>
                     <constraint firstItem="vl2-iK-PEh" firstAttribute="leading" secondItem="bmu-q0-DSa" secondAttribute="leading" constant="16" id="C9k-W7-sPy"/>
                     <constraint firstAttribute="trailing" secondItem="JjO-GV-OV1" secondAttribute="trailing" constant="16" id="DAZ-SG-aV2"/>
-                    <constraint firstAttribute="bottom" secondItem="vl2-iK-PEh" secondAttribute="bottom" constant="16" id="Go2-Ef-pbE"/>
-                    <constraint firstItem="JjO-GV-OV1" firstAttribute="top" secondItem="bmu-q0-DSa" secondAttribute="top" constant="16" id="Kdw-iE-6YU"/>
-                    <constraint firstItem="vl2-iK-PEh" firstAttribute="top" secondItem="bmu-q0-DSa" secondAttribute="top" constant="16" id="MmQ-wm-WVz"/>
+                    <constraint firstAttribute="bottom" secondItem="vl2-iK-PEh" secondAttribute="bottom" constant="8" id="Go2-Ef-pbE"/>
+                    <constraint firstItem="JjO-GV-OV1" firstAttribute="top" secondItem="bmu-q0-DSa" secondAttribute="top" constant="8" id="Kdw-iE-6YU"/>
+                    <constraint firstItem="vl2-iK-PEh" firstAttribute="top" secondItem="bmu-q0-DSa" secondAttribute="top" constant="8" id="MmQ-wm-WVz"/>
                     <constraint firstItem="Oaw-MA-bFE" firstAttribute="leading" secondItem="bmu-q0-DSa" secondAttribute="leadingMargin" constant="16" id="eJz-av-E8P"/>
                     <constraint firstItem="JjO-GV-OV1" firstAttribute="leading" secondItem="bmu-q0-DSa" secondAttribute="leading" constant="16" id="xBd-IT-kdZ"/>
                 </constraints>

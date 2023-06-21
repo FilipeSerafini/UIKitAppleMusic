@@ -18,6 +18,7 @@ class bigCardTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         imageCover.cornerRadius(16, forCorners: [.all])
+        blurCard.cornerRadius(16, forCorners: [.all])
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

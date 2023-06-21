@@ -142,9 +142,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0EDlULDWMq7mUhj28tvkol" translatesAutoresizingMaskIntoConstraints="NO" id="cwR-o3-YJB">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0EDlULDWMq7mUhj28tvkol" translatesAutoresizingMaskIntoConstraints="NO" id="cwR-o3-YJB">
                                 <rect key="frame" x="80" y="16" width="233" height="200"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="cwR-o3-YJB" secondAttribute="height" multiplier="233:200" id="5wl-DH-Ae4"/>
                                     <constraint firstAttribute="height" constant="200" id="TIj-Kh-i5h"/>
                                 </constraints>
                             </imageView>
@@ -211,6 +212,7 @@
                         <outlet property="imageCover" destination="cwR-o3-YJB" id="oW8-wD-vGm"/>
                         <outlet property="playButton" destination="T7B-to-cyI" id="fAD-cv-hu3"/>
                         <outlet property="playlistTableView" destination="ssg-5d-t3O" id="DdU-h8-Y9b"/>
+                        <outlet property="playlistTitleLabel" destination="a5H-Rp-zRR" id="iCD-UL-Msr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHb-cj-jfo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

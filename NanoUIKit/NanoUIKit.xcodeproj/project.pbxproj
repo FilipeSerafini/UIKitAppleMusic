@@ -26,6 +26,9 @@
 		F92480BF2A422F9D0028ADDC /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92480B72A422F9D0028ADDC /* LibraryViewController.swift */; };
 		F92480C02A422F9D0028ADDC /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92480B82A422F9D0028ADDC /* LibraryTableViewCell.swift */; };
 		F92480C12A422F9D0028ADDC /* LibraryArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92480BA2A422F9D0028ADDC /* LibraryArtistsViewController.swift */; };
+		F92480C52A431ED00028ADDC /* xibBigCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92480C42A431ED00028ADDC /* xibBigCard.xib */; };
+		F92480C72A4330CE0028ADDC /* bigCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92480C62A4330CE0028ADDC /* bigCardTableViewCell.swift */; };
+		F92480C92A4339210028ADDC /* extensionCornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92480C82A4339210028ADDC /* extensionCornerRadius.swift */; };
 		F963EE092A40CC80000BE036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963EE082A40CC80000BE036 /* AppDelegate.swift */; };
 		F963EE0B2A40CC80000BE036 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963EE0A2A40CC80000BE036 /* SceneDelegate.swift */; };
 		F963EE0D2A40CC80000BE036 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963EE0C2A40CC80000BE036 /* ViewController.swift */; };
@@ -54,6 +57,9 @@
 		F92480B72A422F9D0028ADDC /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		F92480B82A422F9D0028ADDC /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
 		F92480BA2A422F9D0028ADDC /* LibraryArtistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryArtistsViewController.swift; sourceTree = "<group>"; };
+		F92480C42A431ED00028ADDC /* xibBigCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = xibBigCard.xib; sourceTree = "<group>"; };
+		F92480C62A4330CE0028ADDC /* bigCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bigCardTableViewCell.swift; sourceTree = "<group>"; };
+		F92480C82A4339210028ADDC /* extensionCornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionCornerRadius.swift; sourceTree = "<group>"; };
 		F963EE052A40CC80000BE036 /* NanoUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F963EE082A40CC80000BE036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F963EE0A2A40CC80000BE036 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +175,14 @@
 			path = LibraryArtists;
 			sourceTree = "<group>";
 		};
+		F92480CA2A4339290028ADDC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F92480C82A4339210028ADDC /* extensionCornerRadius.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F963EDFC2A40CC80000BE036 = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +209,9 @@
 				F963EE082A40CC80000BE036 /* AppDelegate.swift */,
 				F963EE0A2A40CC80000BE036 /* SceneDelegate.swift */,
 				F963EE0C2A40CC80000BE036 /* ViewController.swift */,
+				F92480C42A431ED00028ADDC /* xibBigCard.xib */,
+				F92480C62A4330CE0028ADDC /* bigCardTableViewCell.swift */,
+				F92480CA2A4339290028ADDC /* Extensions */,
 				F963EE0E2A40CC80000BE036 /* Main.storyboard */,
 				F92480AF2A422F9D0028ADDC /* LibraryTab */,
 				F92480A12A4200E00028ADDC /* SearchTab */,
@@ -270,10 +287,10 @@
 				B1704B692A422756006334ED /* Favorites.storyboard in Resources */,
 				B16DBD9D2A40D9D200779B7C /* data-images.json in Resources */,
 				B16DBDA12A40DF4D00779B7C /* MusicXib.xib in Resources */,
-				B159B5422A4230FF00436E7E /* Search.storyboard in Resources */,
 				F963EE102A40CC80000BE036 /* Main.storyboard in Resources */,
 				F92480BB2A422F9D0028ADDC /* Library.storyboard in Resources */,
 				B159B5442A423B4D00436E7E /* Search.storyboard in Resources */,
+				F92480C52A431ED00028ADDC /* xibBigCard.xib in Resources */,
 				B16DBD9F2A40D9D200779B7C /* data-with-images.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +306,7 @@
 				B16DBDA32A40E4E600779B7C /* MusicXibController.swift in Sources */,
 				F92480BC2A422F9D0028ADDC /* LibraryPlaylistsViewController.swift in Sources */,
 				F963EE0D2A40CC80000BE036 /* ViewController.swift in Sources */,
+				F92480C92A4339210028ADDC /* extensionCornerRadius.swift in Sources */,
 				F92480C02A422F9D0028ADDC /* LibraryTableViewCell.swift in Sources */,
 				F92480BE2A422F9D0028ADDC /* LibrarySongsViewController.swift in Sources */,
 				F92480BD2A422F9D0028ADDC /* ChosenPlaylistViewController.swift in Sources */,
@@ -298,6 +316,7 @@
 				B1EC5D5E2A40EC320038A7FB /* FavoritesTableViewCell.swift in Sources */,
 				B16DBDA62A40E9B900779B7C /* FavoritesViewController.swift in Sources */,
 				F92480BF2A422F9D0028ADDC /* LibraryViewController.swift in Sources */,
+				F92480C72A4330CE0028ADDC /* bigCardTableViewCell.swift in Sources */,
 				B16DBD982A40D9C400779B7C /* MusicService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -38,6 +38,8 @@
 		F963EE122A40CC81000BE036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F963EE112A40CC81000BE036 /* Assets.xcassets */; };
 		F963EE152A40CC81000BE036 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F963EE132A40CC81000BE036 /* LaunchScreen.storyboard */; };
 		F9773FEF2A435E2800E286AC /* LibraryAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9773FEE2A435E2800E286AC /* LibraryAlbumsViewController.swift */; };
+		F9773FF22A43701E00E286AC /* xibBigCardSearch.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9773FF12A43701E00E286AC /* xibBigCardSearch.xib */; };
+		F9773FF42A4370DE00E286AC /* BigCardSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9773FF32A4370DE00E286AC /* BigCardSearchCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		F963EE142A40CC81000BE036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F963EE162A40CC81000BE036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9773FEE2A435E2800E286AC /* LibraryAlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAlbumsViewController.swift; sourceTree = "<group>"; };
+		F9773FF12A43701E00E286AC /* xibBigCardSearch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = xibBigCardSearch.xib; sourceTree = "<group>"; };
+		F9773FF32A4370DE00E286AC /* BigCardSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCardSearchCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,7 +230,9 @@
 				F963EE0A2A40CC80000BE036 /* SceneDelegate.swift */,
 				F963EE0C2A40CC80000BE036 /* ViewController.swift */,
 				F92480C42A431ED00028ADDC /* xibBigCard.xib */,
+				F9773FF12A43701E00E286AC /* xibBigCardSearch.xib */,
 				F92480C62A4330CE0028ADDC /* bigCardTableViewCell.swift */,
+				F9773FF32A4370DE00E286AC /* BigCardSearchCell.swift */,
 				F92480CA2A4339290028ADDC /* Extensions */,
 				F963EE0E2A40CC80000BE036 /* Main.storyboard */,
 				F92480CD2A43517F0028ADDC /* Browse Tab */,
@@ -315,6 +321,7 @@
 				B16DBDA12A40DF4D00779B7C /* MusicXib.xib in Resources */,
 				F963EE102A40CC80000BE036 /* Main.storyboard in Resources */,
 				F92480BB2A422F9D0028ADDC /* Library.storyboard in Resources */,
+				F9773FF22A43701E00E286AC /* xibBigCardSearch.xib in Resources */,
 				B159B5442A423B4D00436E7E /* Search.storyboard in Resources */,
 				F92480C52A431ED00028ADDC /* xibBigCard.xib in Resources */,
 				B16DBD9F2A40D9D200779B7C /* data-with-images.json in Resources */,
@@ -336,6 +343,7 @@
 				F92480C02A422F9D0028ADDC /* LibraryTableViewCell.swift in Sources */,
 				F92480BE2A422F9D0028ADDC /* LibrarySongsViewController.swift in Sources */,
 				F92480BD2A422F9D0028ADDC /* ChosenPlaylistViewController.swift in Sources */,
+				F9773FF42A4370DE00E286AC /* BigCardSearchCell.swift in Sources */,
 				F92480C12A422F9D0028ADDC /* LibraryArtistsViewController.swift in Sources */,
 				F92480CF2A43519F0028ADDC /* BrowseMainViewController.swift in Sources */,
 				F9773FEF2A435E2800E286AC /* LibraryAlbumsViewController.swift in Sources */,

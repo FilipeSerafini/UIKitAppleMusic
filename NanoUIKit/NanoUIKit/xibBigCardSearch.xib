@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aXz-gm-Emc" customClass="BigCardSeachCell" customModule="NanoUIKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="187" height="134"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dc2-bH-bVg">
+                <rect key="frame" x="0.0" y="0.0" width="187" height="134"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spatial Audio" translatesAutoresizingMaskIntoConstraints="NO" id="tFE-sf-Svk">
+                        <rect key="frame" x="8" y="8" width="171" height="118"/>
+                    </imageView>
+                    <view alpha="0.34999999403953552" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="ip8-Nb-a7Z">
+                        <rect key="frame" x="8" y="8" width="171" height="118"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Weeknd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEv-4t-hhe">
+                        <rect key="frame" x="16" y="97" width="101" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="pEv-4t-hhe" firstAttribute="leading" secondItem="dc2-bH-bVg" secondAttribute="leading" constant="16" id="DJv-kt-1pg"/>
+                    <constraint firstAttribute="trailing" secondItem="ip8-Nb-a7Z" secondAttribute="trailing" constant="8" id="IrH-7V-LYt"/>
+                    <constraint firstItem="ip8-Nb-a7Z" firstAttribute="leading" secondItem="dc2-bH-bVg" secondAttribute="leading" constant="8" id="LVl-Ek-QbT"/>
+                    <constraint firstAttribute="bottom" secondItem="ip8-Nb-a7Z" secondAttribute="bottom" constant="8" id="MwF-Cf-FE2"/>
+                    <constraint firstItem="tFE-sf-Svk" firstAttribute="top" secondItem="dc2-bH-bVg" secondAttribute="top" constant="8" id="RBp-4W-TXI"/>
+                    <constraint firstAttribute="trailing" secondItem="tFE-sf-Svk" secondAttribute="trailing" constant="8" id="U5G-9I-MQi"/>
+                    <constraint firstAttribute="bottom" secondItem="pEv-4t-hhe" secondAttribute="bottom" constant="16" id="V8G-IM-h4b"/>
+                    <constraint firstItem="ip8-Nb-a7Z" firstAttribute="top" secondItem="dc2-bH-bVg" secondAttribute="top" constant="8" id="YnT-o5-w3I"/>
+                    <constraint firstItem="tFE-sf-Svk" firstAttribute="leading" secondItem="dc2-bH-bVg" secondAttribute="leading" constant="8" id="f52-Dx-EgK"/>
+                    <constraint firstAttribute="bottom" secondItem="tFE-sf-Svk" secondAttribute="bottom" constant="8" id="wnv-Wx-x4J"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="187" height="134"/>
+            <connections>
+                <outlet property="blurCard" destination="ip8-Nb-a7Z" id="xgv-RZ-jSO"/>
+                <outlet property="imageCover" destination="tFE-sf-Svk" id="mPM-cs-hl3"/>
+                <outlet property="titleLabel" destination="pEv-4t-hhe" id="j1I-7p-1JL"/>
+            </connections>
+            <point key="canvasLocation" x="-74" y="33"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Spatial Audio" width="1050" height="510"/>
+    </resources>
+</document>

@@ -7,16 +7,17 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
-
+class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     @IBOutlet weak var songSearch: UISearchBar!
     
-    @IBOutlet weak var searchTableView: UITableView!
+    @IBOutlet weak var searchCollection: UICollectionView!
     
     //Dados reais
     var allData: [MusicCollectionCategory] = [.spatialAudio, .pop, .metal, .hits, .brazillianPop]
     //Dados usados pela tableViewController e alterados aqui
     var usedData: [MusicCollectionCategory] = [.spatialAudio, .pop, .metal, .hits, .brazillianPop]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +26,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         songSearch.delegate = self
         
         //TABLE VIEW DELEGATE
-        searchTableView.delegate = self
-        searchTableView.dataSource = self
-        
-        searchTableView.register(UINib(nibName: "xibBigCard", bundle: .main), forCellReuseIdentifier: "BigCard")
+        searchCollection.delegate = self
+        searchCollection.dataSource = self
+        //
+        searchCollection.register(UINib(nibName: "xibBigCardSearch", bundle: .main), forCellWithReuseIdentifier: "BigCard")
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -43,15 +44,15 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         }
         
         //Dar .update na tableViewController
-        searchTableView.reloadData()
+        searchCollection.reloadData()
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         usedData.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BigCard", for: indexPath) as! bigCardTableViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BigCard", for: indexPath) as! BigCardSeachCell
         
         let data = usedData[indexPath.row]
         cell.imageCover.image = UIImage(named: data.description)
@@ -59,5 +60,36 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        // Verifique se o elemento suplementar é um cabeçalho da seção
+        if kind == UICollectionView.elementKindSectionHeader {
+            
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerBrowse", for: indexPath)
+            
+            return headerView
+        }
+        
+        return UICollectionReusableView()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let collectionViewWidth = collectionView.bounds.width / 2
+        let collectionViewHeigth = collectionView.bounds.height / 4
+        
+        return CGSize(width: collectionViewWidth, height: collectionViewHeigth)
+    }
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        // Definindo o espaçamento horizontal entre as células
+        return 0
+    }
+       
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        // Definindo o espaçamento vertical entre as células
+        return 8
+    }
+       
 }

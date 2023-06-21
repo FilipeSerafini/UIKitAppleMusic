@@ -3,9 +3,10 @@
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,18 +26,27 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="9U8-DC-dZ7"/>
                                 </connections>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aWv-Mg-yjM">
+                                <rect key="frame" x="0.0" y="211" width="393" height="558"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="aWv-Mg-yjM" firstAttribute="top" secondItem="5rY-hX-Ko9" secondAttribute="bottom" id="6c2-Tw-6Oq"/>
+                            <constraint firstItem="aWv-Mg-yjM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Afg-Hh-igF"/>
                             <constraint firstItem="5rY-hX-Ko9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="E7J-V6-VDH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="aWv-Mg-yjM" secondAttribute="bottom" id="WHX-R4-8pS"/>
                             <constraint firstItem="5rY-hX-Ko9" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="b8v-Y9-Csw"/>
                             <constraint firstItem="5rY-hX-Ko9" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="d6D-ua-3lF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aWv-Mg-yjM" secondAttribute="trailing" id="qU3-kh-9c7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" largeTitleDisplayMode="always" id="cjb-b7-eL7"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="searchTableView" destination="aWv-Mg-yjM" id="xGO-0u-4N5"/>
                         <outlet property="songSearch" destination="5rY-hX-Ko9" id="aJ0-13-WsY"/>
                     </connections>
                 </viewController>
@@ -74,5 +84,8 @@
         <namedColor name="AccentColor">
             <color red="1" green="0.17599999904632568" blue="0.33300000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

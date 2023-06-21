@@ -9,33 +9,46 @@ import UIKit
 
 class FavoritesViewController: UIViewController {
 
+    
     @IBOutlet weak var tableView: UITableView!
     
-    var musics: [Music] = MusicService.singleton.getAllMusics()
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    
     var favorites: [Music] = MusicService.singleton.favoriteMusics
-//    favorites.append(musics[2])
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (!musics.isEmpty) {
+        
+        MusicService.singleton.toggleFavorite(music: MusicService.singleton.getAllMusics()[0], isFavorite: true)
+        MusicService.singleton.toggleFavorite(music: MusicService.singleton.getAllMusics()[1], isFavorite: true)
+        
+        reloadData()
+        
+        if (!favorites.isEmpty) {
             tableView.dataSource = self
             tableView.register(UINib(nibName: "FavoritesTableViewCell", bundle: .main), forCellReuseIdentifier: "FavoritesCell")
             tableView.isHidden = false
         }
         
+        searchBar.delegate = self
+        
+        
         // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func reloadData() {
+        self.favorites = MusicService.singleton.favoriteMusics
+        
+        if let text = searchBar.text {
+            searchBar(searchBar, textDidChange: text)
+        }
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
-    */
 
 }
 
@@ -43,23 +56,61 @@ class FavoritesViewController: UIViewController {
 extension FavoritesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return musics.count
+        return favorites.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let music = musics[indexPath.row]
+        let music = favorites[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesCell", for: indexPath) as! FavoritesTableViewCell
-        cell.type = .normal
+        cell.type = .favorite
+    
         
         cell.musicName.text = music.title
         cell.groupName.text = music.artist
         cell.musicImage.image = UIImage(named: music.id)
-        
-        
-        
+        cell.delegate = self
         
         return cell
+    }
+    
+}
+
+// MARK: - UIFavoriteTableViewCellDelegate
+extension FavoritesViewController: FavoritesTavleViewCellDelegate {
+ 
+    func favoriteButtonTapped(cell: FavoritesTableViewCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        
+        let music = favorites[indexPath.row]
+        
+        if MusicService.singleton.favoriteMusics.contains(music) {
+            MusicService.singleton.toggleFavorite(music: music, isFavorite: false)
+        }
+        else {
+            MusicService.singleton.toggleFavorite(music: music, isFavorite: true)
+        }
+        
+        self.reloadData()
+        
+    }
+    
+}
+
+// MARK: - UIFavoriteTableViewCellDelegate
+extension FavoritesViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        favorites = MusicService.singleton.favoriteMusics.filter({ music in
+            music.title.hasPrefix(searchText)
+            
+        })
+        
+        tableView.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
     
 }

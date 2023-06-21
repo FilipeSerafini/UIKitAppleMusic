@@ -11,8 +11,13 @@ enum CellType {
     case favorite, normal
 }
 
+protocol FavoritesTavleViewCellDelegate {
+    func favoriteButtonTapped(cell: FavoritesTableViewCell)
+}
+
 class FavoritesTableViewCell: UITableViewCell {
     
+    var delegate: FavoritesTavleViewCellDelegate?
     
     @IBOutlet weak var musicName: UILabel!
     @IBOutlet weak var groupName: UILabel!
@@ -40,5 +45,8 @@ class FavoritesTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func buttonAction(_ sender: Any) {
+        delegate?.favoriteButtonTapped(cell: self)
+    }
     
 }

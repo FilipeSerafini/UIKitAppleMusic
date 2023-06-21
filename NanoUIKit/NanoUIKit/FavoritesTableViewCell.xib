@@ -24,6 +24,9 @@
                         <color key="tintColor" name="AccentColor"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                        <connections>
+                            <action selector="buttonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="QHM-cF-gNs"/>
+                        </connections>
                     </button>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Yaw-id-E66">
                         <rect key="frame" x="72" y="10.333333333333332" width="94.666666666666686" height="43.333333333333343"/>

@@ -9,7 +9,7 @@ import UIKit
 
 class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var data: [MusicCollectionType] = [.playlist, .artists, .songs]
+    var data: [MusicCollectionType] = [.playlist, .artists, .album, .songs]
     
     @IBOutlet weak var libTableView: UITableView!
     
@@ -44,8 +44,8 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
             performSegue(withIdentifier: "libraryArtistsSegue", sender: self)
         case .songs:
             performSegue(withIdentifier: "librarySongsSegue", sender: self)
-        default:
-            break
+        case .album:
+            performSegue(withIdentifier: "libraryAlbumsSegue", sender: self)
         }
     }
 }

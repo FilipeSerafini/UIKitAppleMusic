@@ -37,6 +37,7 @@
 		F963EE102A40CC80000BE036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F963EE0E2A40CC80000BE036 /* Main.storyboard */; };
 		F963EE122A40CC81000BE036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F963EE112A40CC81000BE036 /* Assets.xcassets */; };
 		F963EE152A40CC81000BE036 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F963EE132A40CC81000BE036 /* LaunchScreen.storyboard */; };
+		F9773FEF2A435E2800E286AC /* LibraryAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9773FEE2A435E2800E286AC /* LibraryAlbumsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		F963EE112A40CC81000BE036 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F963EE142A40CC81000BE036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F963EE162A40CC81000BE036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9773FEE2A435E2800E286AC /* LibraryAlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAlbumsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				F92480B02A422F9D0028ADDC /* Library.storyboard */,
+				F9773FF02A435E2F00E286AC /* LibraryAlbums */,
 				F92480B62A422F9D0028ADDC /* LibraryMainScreen */,
 				F92480B12A422F9D0028ADDC /* LibraryPlaylist */,
 				F92480B92A422F9D0028ADDC /* LibraryArtists */,
@@ -236,6 +239,14 @@
 			path = NanoUIKit;
 			sourceTree = "<group>";
 		};
+		F9773FF02A435E2F00E286AC /* LibraryAlbums */ = {
+			isa = PBXGroup;
+			children = (
+				F9773FEE2A435E2800E286AC /* LibraryAlbumsViewController.swift */,
+			);
+			path = LibraryAlbums;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -327,6 +338,7 @@
 				F92480BD2A422F9D0028ADDC /* ChosenPlaylistViewController.swift in Sources */,
 				F92480C12A422F9D0028ADDC /* LibraryArtistsViewController.swift in Sources */,
 				F92480CF2A43519F0028ADDC /* BrowseMainViewController.swift in Sources */,
+				F9773FEF2A435E2800E286AC /* LibraryAlbumsViewController.swift in Sources */,
 				F963EE092A40CC80000BE036 /* AppDelegate.swift in Sources */,
 				F963EE0B2A40CC80000BE036 /* SceneDelegate.swift in Sources */,
 				B1EC5D5E2A40EC320038A7FB /* FavoritesTableViewCell.swift in Sources */,

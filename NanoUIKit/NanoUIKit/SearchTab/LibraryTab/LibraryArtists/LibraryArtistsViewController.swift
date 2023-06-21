@@ -35,7 +35,7 @@ class LibraryArtistsViewController: UIViewController, UITableViewDelegate, UITab
             
         let artist = artistsData[indexPath.row]
         cell.imageCover.image = UIImage(named: artist.id)
-        cell.titleLabel.text = artist.title
+        cell.titleLabel.text = artist.mainPerson
             
         return cell
     }

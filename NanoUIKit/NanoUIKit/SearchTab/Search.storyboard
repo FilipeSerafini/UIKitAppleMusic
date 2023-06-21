@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Artists, Songs, Lyrics, and More" translatesAutoresizingMaskIntoConstraints="NO" id="5rY-hX-Ko9">
-                                <rect key="frame" x="0.0" y="155" width="393" height="56"/>
+                                <rect key="frame" x="8" y="155" width="377" height="56"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -36,10 +36,10 @@
                         <constraints>
                             <constraint firstItem="aWv-Mg-yjM" firstAttribute="top" secondItem="5rY-hX-Ko9" secondAttribute="bottom" id="6c2-Tw-6Oq"/>
                             <constraint firstItem="aWv-Mg-yjM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Afg-Hh-igF"/>
-                            <constraint firstItem="5rY-hX-Ko9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="E7J-V6-VDH"/>
+                            <constraint firstItem="5rY-hX-Ko9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="E7J-V6-VDH"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="aWv-Mg-yjM" secondAttribute="bottom" id="WHX-R4-8pS"/>
                             <constraint firstItem="5rY-hX-Ko9" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="b8v-Y9-Csw"/>
-                            <constraint firstItem="5rY-hX-Ko9" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="d6D-ua-3lF"/>
+                            <constraint firstItem="5rY-hX-Ko9" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-8" id="d6D-ua-3lF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aWv-Mg-yjM" secondAttribute="trailing" id="qU3-kh-9c7"/>
                         </constraints>
                     </view>

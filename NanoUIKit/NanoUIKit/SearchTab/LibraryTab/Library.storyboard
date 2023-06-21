@@ -94,6 +94,7 @@
                         <segue destination="yBh-84-g7N" kind="show" identifier="libraryPlaylistSegue" id="IYe-9y-NIL"/>
                         <segue destination="zDi-2S-zkA" kind="show" identifier="libraryArtistsSegue" id="Ers-t6-9CM"/>
                         <segue destination="hug-D6-qeo" kind="show" identifier="librarySongsSegue" id="1gB-TJ-gcT"/>
+                        <segue destination="68p-wG-OfM" kind="show" identifier="libraryAlbumsSegue" id="6XW-jB-NOD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -227,7 +228,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kmP-UH-56L" customClass="I">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kmP-UH-56L">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -243,7 +244,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Songs" largeTitleDisplayMode="never" id="Tsx-ii-o1z"/>
                     <connections>
-                        <outlet property="songsTableView" destination="kmP-UH-56L" id="yQG-8D-EVL"/>
+                        <outlet property="albumTableView" destination="kmP-UH-56L" id="UYi-y1-PYY"/>
+                        <outlet property="songsTableView" destination="kmP-UH-56L" id="vod-3d-6aU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="119-Mb-ozt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -284,6 +286,40 @@
             </objects>
             <point key="canvasLocation" x="3453" y="4"/>
         </scene>
+        <!--Albums-->
+        <scene sceneID="f5U-zQ-O8Q">
+            <objects>
+                <viewController id="68p-wG-OfM" customClass="LibraryAlbumsViewController" customModule="NanoUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QDt-RG-FB0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tI3-Pb-Gcv">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aT4-jL-Giv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tI3-Pb-Gcv" firstAttribute="leading" secondItem="aT4-jL-Giv" secondAttribute="leading" id="4LZ-dD-rx4"/>
+                            <constraint firstItem="aT4-jL-Giv" firstAttribute="trailing" secondItem="tI3-Pb-Gcv" secondAttribute="trailing" id="NSN-sB-6mr"/>
+                            <constraint firstItem="aT4-jL-Giv" firstAttribute="bottom" secondItem="tI3-Pb-Gcv" secondAttribute="bottom" id="Pta-8T-9s6"/>
+                            <constraint firstItem="tI3-Pb-Gcv" firstAttribute="top" secondItem="aT4-jL-Giv" secondAttribute="top" id="gDD-9H-Czk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Albums" largeTitleDisplayMode="never" id="VE6-wI-FGh">
+                        <barButtonItem key="backBarButtonItem" title=" " id="48d-ab-r7g"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="albumTableView" destination="tI3-Pb-Gcv" id="d3A-zr-tJN"/>
+                        <segue destination="Zp3-ex-bao" kind="show" identifier="albumsPlaylistSegue" id="0Xo-l8-thN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nwB-b9-yEI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4400" y="535"/>
+        </scene>
         <!--Library-->
         <scene sceneID="iPs-Qc-BOs">
             <objects>
@@ -311,7 +347,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hrX-l1-GnD"/>
+        <segue reference="0Xo-l8-thN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="0EDlULDWMq7mUhj28tvkol" width="640" height="640"/>

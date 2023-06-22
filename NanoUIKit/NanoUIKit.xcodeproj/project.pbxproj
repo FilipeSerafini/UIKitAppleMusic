@@ -46,6 +46,8 @@
 		F97740002A43CCA500E286AC /* LibraryHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9773FFF2A43CCA500E286AC /* LibraryHeaderTableViewCell.swift */; };
 		F97740042A44873900E286AC /* DelegatePlaylistCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97740032A44873900E286AC /* DelegatePlaylistCollection.swift */; };
 		F97740062A448DA400E286AC /* AlbumDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97740052A448DA400E286AC /* AlbumDescriptionTableViewCell.swift */; };
+		F97740082A44A82800E286AC /* MusicPlaying.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F97740072A44A82800E286AC /* MusicPlaying.storyboard */; };
+		F977400A2A44B7F700E286AC /* PlayMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97740092A44B7F700E286AC /* PlayMusicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +92,8 @@
 		F9773FFF2A43CCA500E286AC /* LibraryHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		F97740032A44873900E286AC /* DelegatePlaylistCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatePlaylistCollection.swift; sourceTree = "<group>"; };
 		F97740052A448DA400E286AC /* AlbumDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		F97740072A44A82800E286AC /* MusicPlaying.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicPlaying.storyboard; sourceTree = "<group>"; };
+		F97740092A44B7F700E286AC /* PlayMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMusicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +251,8 @@
 				F9773FF52A43926100E286AC /* XibsCards */,
 				F92480CA2A4339290028ADDC /* Extensions */,
 				F963EE0E2A40CC80000BE036 /* Main.storyboard */,
+				F97740072A44A82800E286AC /* MusicPlaying.storyboard */,
+				F97740092A44B7F700E286AC /* PlayMusicViewController.swift */,
 				F97740032A44873900E286AC /* DelegatePlaylistCollection.swift */,
 				F92480CD2A43517F0028ADDC /* Browse Tab */,
 				F92480AF2A422F9D0028ADDC /* LibraryTab */,
@@ -364,6 +370,7 @@
 				B1EC5D5F2A40EC320038A7FB /* FavoritesTableViewCell.xib in Resources */,
 				F963EE152A40CC81000BE036 /* LaunchScreen.storyboard in Resources */,
 				F963EE122A40CC81000BE036 /* Assets.xcassets in Resources */,
+				F97740082A44A82800E286AC /* MusicPlaying.storyboard in Resources */,
 				B16DBD9E2A40D9D200779B7C /* data.json in Resources */,
 				B1704B692A422756006334ED /* Favorites.storyboard in Resources */,
 				F92480CC2A4350AF0028ADDC /* Browse.storyboard in Resources */,
@@ -410,6 +417,7 @@
 				F92480C72A4330CE0028ADDC /* bigCardTableViewCell.swift in Sources */,
 				F97740062A448DA400E286AC /* AlbumDescriptionTableViewCell.swift in Sources */,
 				B16DBD982A40D9C400779B7C /* MusicService.swift in Sources */,
+				F977400A2A44B7F700E286AC /* PlayMusicViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

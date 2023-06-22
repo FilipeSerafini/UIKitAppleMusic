@@ -50,7 +50,7 @@
                 <outlet property="imageCover" destination="tFE-sf-Svk" id="mPM-cs-hl3"/>
                 <outlet property="titleLabel" destination="pEv-4t-hhe" id="j1I-7p-1JL"/>
             </connections>
-            <point key="canvasLocation" x="-74" y="33"/>
+            <point key="canvasLocation" x="-74.045801526717554" y="32.394366197183103"/>
         </collectionViewCell>
     </objects>
     <resources>

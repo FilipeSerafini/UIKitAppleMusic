@@ -24,6 +24,7 @@
                         <segue destination="3Bf-nH-CqF" kind="relationship" relationship="viewControllers" id="awj-8j-U9v"/>
                         <segue destination="Xyd-UJ-91l" kind="relationship" relationship="viewControllers" id="Kho-dJ-PQd"/>
                         <segue destination="mEe-3D-PJK" kind="relationship" relationship="viewControllers" id="n9E-sT-lUe"/>
+                        <segue destination="LRS-Lz-AdJ" kind="relationship" relationship="viewControllers" id="TFb-MW-gbq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMN-jD-ygT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -69,6 +70,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Xz-By-zbA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-204" y="-95"/>
+        </scene>
+        <!--MusicPlaying-->
+        <scene sceneID="SLc-Kz-gy5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MusicPlaying" id="LRS-Lz-AdJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="tb4-Eg-wW6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ebN-HI-pNN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-301" y="68"/>
         </scene>
     </scenes>
     <resources>

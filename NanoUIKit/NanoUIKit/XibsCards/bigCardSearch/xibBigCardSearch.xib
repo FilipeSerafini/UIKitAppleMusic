@@ -20,7 +20,7 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spatial Audio" translatesAutoresizingMaskIntoConstraints="NO" id="tFE-sf-Svk">
                         <rect key="frame" x="8" y="8" width="171" height="118"/>
                     </imageView>
-                    <view alpha="0.34999999403953552" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="ip8-Nb-a7Z">
+                    <view alpha="0.34999999999999998" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="ip8-Nb-a7Z">
                         <rect key="frame" x="8" y="8" width="171" height="118"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>

@@ -60,7 +60,7 @@ enum MusicCollectionType: String, Decodable, CaseIterable {
             case .playlist:
                 return "music.note.list"
             case .album:
-                return ""
+                return "square.stack"
             case .songs:
                 return "music.note"
             case .artists:

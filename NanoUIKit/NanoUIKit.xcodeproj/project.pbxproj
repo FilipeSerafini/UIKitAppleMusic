@@ -40,6 +40,10 @@
 		F9773FEF2A435E2800E286AC /* LibraryAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9773FEE2A435E2800E286AC /* LibraryAlbumsViewController.swift */; };
 		F9773FF22A43701E00E286AC /* xibBigCardSearch.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9773FF12A43701E00E286AC /* xibBigCardSearch.xib */; };
 		F9773FF42A4370DE00E286AC /* BigCardSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9773FF32A4370DE00E286AC /* BigCardSearchCell.swift */; };
+		F9773FF92A4392A300E286AC /* LibraryCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9773FF82A4392A300E286AC /* LibraryCard.xib */; };
+		F9773FFC2A4394E000E286AC /* LibraryCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9773FFB2A4394E000E286AC /* LibraryCardCollectionViewCell.swift */; };
+		F9773FFE2A43BC8200E286AC /* LibraryCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9773FFD2A43BC8200E286AC /* LibraryCollectionTableViewCell.swift */; };
+		F97740002A43CCA500E286AC /* LibraryHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9773FFF2A43CCA500E286AC /* LibraryHeaderTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +82,10 @@
 		F9773FEE2A435E2800E286AC /* LibraryAlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAlbumsViewController.swift; sourceTree = "<group>"; };
 		F9773FF12A43701E00E286AC /* xibBigCardSearch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = xibBigCardSearch.xib; sourceTree = "<group>"; };
 		F9773FF32A4370DE00E286AC /* BigCardSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCardSearchCell.swift; sourceTree = "<group>"; };
+		F9773FF82A4392A300E286AC /* LibraryCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryCard.xib; sourceTree = "<group>"; };
+		F9773FFB2A4394E000E286AC /* LibraryCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		F9773FFD2A43BC8200E286AC /* LibraryCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCollectionTableViewCell.swift; sourceTree = "<group>"; };
+		F9773FFF2A43CCA500E286AC /* LibraryHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryHeaderTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +182,8 @@
 			children = (
 				F92480B72A422F9D0028ADDC /* LibraryViewController.swift */,
 				F92480B82A422F9D0028ADDC /* LibraryTableViewCell.swift */,
+				F9773FFD2A43BC8200E286AC /* LibraryCollectionTableViewCell.swift */,
+				F9773FFF2A43CCA500E286AC /* LibraryHeaderTableViewCell.swift */,
 			);
 			path = LibraryMainScreen;
 			sourceTree = "<group>";
@@ -229,10 +239,7 @@
 				F963EE082A40CC80000BE036 /* AppDelegate.swift */,
 				F963EE0A2A40CC80000BE036 /* SceneDelegate.swift */,
 				F963EE0C2A40CC80000BE036 /* ViewController.swift */,
-				F92480C42A431ED00028ADDC /* xibBigCard.xib */,
-				F9773FF12A43701E00E286AC /* xibBigCardSearch.xib */,
-				F92480C62A4330CE0028ADDC /* bigCardTableViewCell.swift */,
-				F9773FF32A4370DE00E286AC /* BigCardSearchCell.swift */,
+				F9773FF52A43926100E286AC /* XibsCards */,
 				F92480CA2A4339290028ADDC /* Extensions */,
 				F963EE0E2A40CC80000BE036 /* Main.storyboard */,
 				F92480CD2A43517F0028ADDC /* Browse Tab */,
@@ -251,6 +258,43 @@
 				F9773FEE2A435E2800E286AC /* LibraryAlbumsViewController.swift */,
 			);
 			path = LibraryAlbums;
+			sourceTree = "<group>";
+		};
+		F9773FF52A43926100E286AC /* XibsCards */ = {
+			isa = PBXGroup;
+			children = (
+				F9773FF72A43928400E286AC /* bigCard */,
+				F9773FF62A43927800E286AC /* bigCardSearch */,
+				F9773FFA2A4394C800E286AC /* LibraryCard */,
+			);
+			path = XibsCards;
+			sourceTree = "<group>";
+		};
+		F9773FF62A43927800E286AC /* bigCardSearch */ = {
+			isa = PBXGroup;
+			children = (
+				F9773FF12A43701E00E286AC /* xibBigCardSearch.xib */,
+				F9773FF32A4370DE00E286AC /* BigCardSearchCell.swift */,
+			);
+			path = bigCardSearch;
+			sourceTree = "<group>";
+		};
+		F9773FF72A43928400E286AC /* bigCard */ = {
+			isa = PBXGroup;
+			children = (
+				F92480C42A431ED00028ADDC /* xibBigCard.xib */,
+				F92480C62A4330CE0028ADDC /* bigCardTableViewCell.swift */,
+			);
+			path = bigCard;
+			sourceTree = "<group>";
+		};
+		F9773FFA2A4394C800E286AC /* LibraryCard */ = {
+			isa = PBXGroup;
+			children = (
+				F9773FF82A4392A300E286AC /* LibraryCard.xib */,
+				F9773FFB2A4394E000E286AC /* LibraryCardCollectionViewCell.swift */,
+			);
+			path = LibraryCard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +362,7 @@
 				B1704B692A422756006334ED /* Favorites.storyboard in Resources */,
 				F92480CC2A4350AF0028ADDC /* Browse.storyboard in Resources */,
 				B16DBD9D2A40D9D200779B7C /* data-images.json in Resources */,
+				F9773FF92A4392A300E286AC /* LibraryCard.xib in Resources */,
 				B16DBDA12A40DF4D00779B7C /* MusicXib.xib in Resources */,
 				F963EE102A40CC80000BE036 /* Main.storyboard in Resources */,
 				F92480BB2A422F9D0028ADDC /* Library.storyboard in Resources */,
@@ -337,6 +382,7 @@
 			files = (
 				F92480A32A42018B0028ADDC /* SearchViewController.swift in Sources */,
 				B16DBDA32A40E4E600779B7C /* MusicXibController.swift in Sources */,
+				F97740002A43CCA500E286AC /* LibraryHeaderTableViewCell.swift in Sources */,
 				F92480BC2A422F9D0028ADDC /* LibraryPlaylistsViewController.swift in Sources */,
 				F963EE0D2A40CC80000BE036 /* ViewController.swift in Sources */,
 				F92480C92A4339210028ADDC /* extensionCornerRadius.swift in Sources */,
@@ -348,9 +394,11 @@
 				F92480CF2A43519F0028ADDC /* BrowseMainViewController.swift in Sources */,
 				F9773FEF2A435E2800E286AC /* LibraryAlbumsViewController.swift in Sources */,
 				F963EE092A40CC80000BE036 /* AppDelegate.swift in Sources */,
+				F9773FFE2A43BC8200E286AC /* LibraryCollectionTableViewCell.swift in Sources */,
 				F963EE0B2A40CC80000BE036 /* SceneDelegate.swift in Sources */,
 				B1EC5D5E2A40EC320038A7FB /* FavoritesTableViewCell.swift in Sources */,
 				B16DBDA62A40E9B900779B7C /* FavoritesViewController.swift in Sources */,
+				F9773FFC2A4394E000E286AC /* LibraryCardCollectionViewCell.swift in Sources */,
 				F92480BF2A422F9D0028ADDC /* LibraryViewController.swift in Sources */,
 				F92480C72A4330CE0028ADDC /* bigCardTableViewCell.swift in Sources */,
 				B16DBD982A40D9C400779B7C /* MusicService.swift in Sources */,

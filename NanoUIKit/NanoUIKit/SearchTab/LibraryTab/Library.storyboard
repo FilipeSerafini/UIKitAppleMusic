@@ -22,7 +22,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ThM-it-AlW">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="666"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="separatorColor" systemColor="secondaryLabelColor"/>
+                                <color key="separatorColor" systemColor="systemGrayColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LibraryCategoryCell" rowHeight="50" id="UHQ-cV-TCL" customClass="LibraryTableViewCell" customModule="NanoUIKit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="50"/>
@@ -38,7 +38,7 @@
                                                         <constraint firstAttribute="width" secondItem="yCu-ot-h6J" secondAttribute="height" multiplier="1:1" id="pzl-2R-Vuh"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhy-Pt-gJW">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhy-Pt-gJW">
                                                     <rect key="frame" x="50" y="15" width="71" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,9 +68,74 @@
                                                 <constraint firstItem="yCu-ot-h6J" firstAttribute="top" secondItem="3my-50-Wpg" secondAttribute="top" constant="12" id="ti9-uD-qck"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="64" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="categoryLabel" destination="Zhy-Pt-gJW" id="gWK-8Q-frd"/>
                                             <outlet property="mainIcon" destination="yCu-ot-h6J" id="Lf8-u3-ml2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LibraryCollectionCell" rowHeight="156" id="mC6-yU-tyX" customClass="LibraryCollectionTableViewCell" customModule="NanoUIKit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="100" width="393" height="156"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mC6-yU-tyX" id="oaK-Z9-gz7">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="156"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DQt-Ac-3D3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="156"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5Ei-kj-UQc">
+                                                        <size key="itemSize" width="128" height="128"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells/>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="DQt-Ac-3D3" secondAttribute="bottom" id="OIQ-Zg-bO1"/>
+                                                <constraint firstAttribute="trailing" secondItem="DQt-Ac-3D3" secondAttribute="trailing" id="fTK-Rh-PFB"/>
+                                                <constraint firstItem="DQt-Ac-3D3" firstAttribute="top" secondItem="oaK-Z9-gz7" secondAttribute="top" id="fqi-jL-f2E"/>
+                                                <constraint firstItem="DQt-Ac-3D3" firstAttribute="leading" secondItem="oaK-Z9-gz7" secondAttribute="leading" id="oPz-ok-Ziy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cardCollection" destination="DQt-Ac-3D3" id="aqV-gZ-W3M"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LibraryHeader" rowHeight="63" id="2Cp-qL-UAV" customClass="LibraryHeaderTableViewCell" customModule="NanoUIKit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="256" width="393" height="63"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Cp-qL-UAV" id="z71-bu-r2e">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="63"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recently Added" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwl-P5-byo">
+                                                    <rect key="frame" x="20" y="11" width="162.66666666666666" height="41"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRP-Ie-k4W">
+                                                    <rect key="frame" x="190.66666666666666" y="14" width="36.666666666666657" height="35"/>
+                                                    <color key="tintColor" systemColor="systemGrayColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain">
+                                                        <imageReference key="image" image="chevron.right" catalog="system" symbolScale="default"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Fwl-P5-byo" secondAttribute="bottom" id="KXU-fg-Noi"/>
+                                                <constraint firstItem="Fwl-P5-byo" firstAttribute="top" secondItem="z71-bu-r2e" secondAttribute="topMargin" id="KiC-6T-eKp"/>
+                                                <constraint firstItem="Fwl-P5-byo" firstAttribute="leading" secondItem="z71-bu-r2e" secondAttribute="leadingMargin" id="oIz-6d-Hk7"/>
+                                                <constraint firstItem="lRP-Ie-k4W" firstAttribute="leading" secondItem="Fwl-P5-byo" secondAttribute="trailing" constant="8" id="rFG-I9-wi9"/>
+                                                <constraint firstItem="lRP-Ie-k4W" firstAttribute="centerY" secondItem="z71-bu-r2e" secondAttribute="centerY" id="xdh-Tq-Xa6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="headerButton" destination="lRP-Ie-k4W" id="ZyB-3c-K6f"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -99,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="981" y="4"/>
+            <point key="canvasLocation" x="980.91603053435108" y="3.5211267605633805"/>
         </scene>
         <!--Playlists-->
         <scene sceneID="AJg-nJ-qKn">
@@ -262,8 +327,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Songs" largeTitleDisplayMode="never" id="Tsx-ii-o1z"/>
                     <connections>
-                        <outlet property="albumTableView" destination="kmP-UH-56L" id="UYi-y1-PYY"/>
-                        <outlet property="songsTableView" destination="kmP-UH-56L" id="vod-3d-6aU"/>
+                        <outlet property="songsTableView" destination="kmP-UH-56L" id="MNd-8T-rqc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="119-Mb-ozt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -330,7 +394,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="48d-ab-r7g"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="albumTableView" destination="tI3-Pb-Gcv" id="d3A-zr-tJN"/>
+                        <outlet property="albumTableView" destination="tI3-Pb-Gcv" id="9EU-s9-f6e"/>
                         <segue destination="Zp3-ex-bao" kind="show" identifier="albumsPlaylistSegue" id="0Xo-l8-thN"/>
                     </connections>
                 </viewController>
@@ -379,14 +443,14 @@
         <namedColor name="AccentColor">
             <color red="1" green="0.17599999904632568" blue="0.33300000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

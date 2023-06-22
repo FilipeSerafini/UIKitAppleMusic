@@ -449,7 +449,7 @@
         <scene sceneID="iPs-Qc-BOs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9VY-FM-DQo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Library" image="music.note" catalog="system" id="IpM-Lr-GEe"/>
+                    <tabBarItem key="tabBarItem" title="Library" image="Subtract" id="IpM-Lr-GEe"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -476,9 +476,9 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="0EDlULDWMq7mUhj28tvkol" width="640" height="640"/>
+        <image name="Subtract" width="21" height="27"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="ellipsis.circle" catalog="system" width="128" height="123"/>
-        <image name="music.note" catalog="system" width="96" height="128"/>
         <image name="music.note.list" catalog="system" width="128" height="115"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="123"/>

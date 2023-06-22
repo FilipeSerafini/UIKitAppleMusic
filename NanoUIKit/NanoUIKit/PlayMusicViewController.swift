@@ -7,8 +7,16 @@
 
 import UIKit
 
-class PlayMusicViewController: UIViewController {
-//, UITableViewDelegate, UITableViewDataSource
+enum State{
+    case main, playlist, lyrics
+}
+
+class PlayMusicViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var currentState: State = .main
+    
+    var fullPlaylist: MusicCollection = MusicService.singleton.loadLibrary().randomElement()!
+    var currentMusic: Music?
     
     //FirstScreen
     //owner of things under this
@@ -21,8 +29,13 @@ class PlayMusicViewController: UIViewController {
     @IBOutlet weak var tillEndLabel: UILabel!
     @IBOutlet weak var startLabel: UILabel!
     
+    
     func prepareLeaveFirstScreen(){
         ownerView.isHidden = true
+    }
+    
+    func goToFirstScren(){
+        ownerView.isHidden = false
     }
     
     
@@ -32,9 +45,22 @@ class PlayMusicViewController: UIViewController {
     //Things that should only appear in playlistScreen
     @IBOutlet weak var playlistTableView: UITableView!
     
+    func prepareLeaveSecondScreen() {
+        playlistView.isHidden = true
+    }
+    
+    func goToPlaylistScreen(){
+        playlistView.isHidden = false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        prepareLeaveSecondScreen()
+        
+        if currentMusic == nil{
+            currentMusic = fullPlaylist.musics[0]
+        }
 
         imageCover.cornerRadius(12, forCorners: [.all])
         
@@ -54,10 +80,119 @@ class PlayMusicViewController: UIViewController {
         // Adicione o gradiente à camada da view
         view.layer.insertSublayer(gradientLayer, at: 0)
         
-//        playlistTableView.delegate = self
-//        playlistTableView.dataSource = self
-//        
-//        playlistTableView.register(UINib(nibName: "FavoritesTableViewCell", bundle: .main), forCellReuseIdentifier: "FavoriteCell")
+        playlistTableView.delegate = self
+        playlistTableView.dataSource = self
+        
+        playlistTableView.register(UINib(nibName: "FavoritesTableViewCell", bundle: .main), forCellReuseIdentifier: "FavoriteCell")
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if currentState == .playlist{
+            return 3
+        } else if currentState == .lyrics{
+            return 2
+        }
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if currentState == .playlist{
+            return section == 2 ? fullPlaylist.musics.count - 1 : 1
+        } else if currentState == .lyrics{
+            return section == 0 ? 1 : 3
+        }
+        return section == 2 ? fullPlaylist.musics.count - 1 : 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if currentState == .playlist || currentState == .main{
+            switch indexPath.section{
+            case 0:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath) as! FavoritesTableViewCell
+                cell.type = .favorite
+                
+                let music = currentMusic!
+                cell.musicImage.image = UIImage(named: music.id)
+                cell.groupName.text = music.artist
+                cell.musicName.text = music.title
+                return cell
+            case 1:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath)
+                return cell
+            default:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath) as! FavoritesTableViewCell
+                
+                cell.type = .normal
+                
+                let music = fullPlaylist.musics[indexPath.row + 1]
+                cell.musicImage.image = UIImage(named: music.id)
+                cell.groupName.text = music.artist
+                cell.musicName.text = music.title
+                return cell
+            }
+            
+        } else {
+            if indexPath.section == 0{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath) as! FavoritesTableViewCell
+                cell.type = .favorite
+                
+                let music = currentMusic!
+                cell.musicImage.image = UIImage(named: music.id)
+                cell.groupName.text = music.artist
+                cell.musicName.text = music.title
+                
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "LyricsCell", for: indexPath) as! LyricsTableViewCell
+                
+                let text = lyrics[indexPath.row]
+                let opacity = 1.0 - (0.3334 * Double(indexPath.row))
+                
+                cell.lyricsLabel.text = text
+                cell.lyricsLabel.layer.opacity = Float(opacity)
+                
+                cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
+                
+                return cell
+            }
+        }
+    }
+    
+    var lyrics: [String] = [
+        "Renan Trévia, muito obrigado por tudo.",
+        "Você foi nosso mentor na jornada",
+        "do herói. Nos sentimos no lowpoint"
+    ]
+    
+    
+    @IBOutlet weak var playlistButton: UIButton!
+    
+    @IBAction func playlistToggle(_ sender: Any) {
+        
+        if currentState == .playlist{
+            prepareLeaveSecondScreen()
+            goToFirstScren()
+            currentState = .main
+        } else {
+            prepareLeaveFirstScreen()
+            goToPlaylistScreen()
+            currentState = .playlist
+            playlistTableView.reloadData()
+        }
+    }
+    
+    
+    @IBAction func lyricsToggle(_ sender: Any) {
+        if currentState == .lyrics {
+            prepareLeaveSecondScreen()
+            goToFirstScren()
+            currentState = .main
+        } else {
+            prepareLeaveFirstScreen()
+            goToPlaylistScreen()
+            currentState = .lyrics
+            playlistTableView.reloadData()
+        }
     }
     
 }

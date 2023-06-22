@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -52,6 +52,7 @@
                         </constraints>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" red="1" green="0.1764705882352941" blue="0.33333333333333331" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="ws2-jN-K92" secondAttribute="trailing" constant="16" id="KQ6-5A-Gmu"/>
                     <constraint firstItem="oOr-qf-H5J" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Spv-2R-HuF"/>
@@ -64,6 +65,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="groupName" destination="o1W-aS-92z" id="waT-6o-qr8"/>
                 <outlet property="musicImage" destination="oOr-qf-H5J" id="7Uu-BP-Xfg"/>

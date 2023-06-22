@@ -10,13 +10,29 @@ import UIKit
 class PlayMusicViewController: UIViewController {
 
     
+    //owner of things under this
+    @IBOutlet weak var ownerView: UIView!
+    //Things that sould only appear on first screen
     @IBOutlet weak var imageCover: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
+    @IBOutlet weak var progressViewUpper: UIProgressView!
+    @IBOutlet weak var tillEndLabel: UILabel!
+    @IBOutlet weak var startLabel: UILabel!
+    
+    func prepareLeaveFirstScreen(){
+        ownerView.isHidden = true
+    }
+    
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        imageCover.cornerRadius(12, forCorners: [.all])
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds

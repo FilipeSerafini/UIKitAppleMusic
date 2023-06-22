@@ -67,7 +67,7 @@ enum MusicCollectionType: String, Decodable, CaseIterable {
             case .playlist:
                 return "music.note.list"
             case .album:
-                return ""
+                return "square.stack"
             case .songs:
                 return "music.note"
             case .artists:
@@ -217,7 +217,6 @@ final class MusicService {
     /// If the ID is invalid or does not match any record, `nil` is returned.
     ///
     func getAllCollection(withType: MusicCollectionType) -> [MusicCollection] {
-
         return collections.filter{ music in
             return music.type == withType}
     }
@@ -228,6 +227,10 @@ final class MusicService {
     ///
     func getAllMusics() -> [Music] {
         return self.allMusics
+    }
+    
+    func eraseAllFavorites() {
+        favoriteMusics = []
     }
     
     //MARK: Remove from collection

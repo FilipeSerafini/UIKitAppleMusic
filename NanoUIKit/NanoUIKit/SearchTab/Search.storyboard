@@ -3,9 +3,10 @@
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,25 +19,57 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Artists, Songs, Lyrics, and More" translatesAutoresizingMaskIntoConstraints="NO" id="5rY-hX-Ko9">
-                                <rect key="frame" x="0.0" y="155" width="393" height="56"/>
+                                <rect key="frame" x="8" y="155" width="377" height="56"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="9U8-DC-dZ7"/>
                                 </connections>
                             </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Djc-ND-g3W">
+                                <rect key="frame" x="0.0" y="211" width="393" height="558"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IAE-bG-yIa">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="headerBrowse" id="VbS-mb-m7r">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Browse Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENX-tC-IUy">
+                                            <rect key="frame" x="16" y="10.666666666666666" width="211.66666666666666" height="28.666666666666671"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ENX-tC-IUy" firstAttribute="centerY" secondItem="VbS-mb-m7r" secondAttribute="centerY" id="Ajj-vM-SDd"/>
+                                        <constraint firstItem="ENX-tC-IUy" firstAttribute="leading" secondItem="VbS-mb-m7r" secondAttribute="leadingMargin" constant="8" id="Smx-6K-nPw"/>
+                                    </constraints>
+                                </collectionReusableView>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5rY-hX-Ko9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="E7J-V6-VDH"/>
+                            <constraint firstItem="5rY-hX-Ko9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="E7J-V6-VDH"/>
+                            <constraint firstItem="Djc-ND-g3W" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Fal-3b-OF4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Djc-ND-g3W" secondAttribute="trailing" id="HqH-Nt-kb1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Djc-ND-g3W" secondAttribute="bottom" id="Ocy-rB-Aeu"/>
                             <constraint firstItem="5rY-hX-Ko9" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="b8v-Y9-Csw"/>
-                            <constraint firstItem="5rY-hX-Ko9" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="d6D-ua-3lF"/>
+                            <constraint firstItem="5rY-hX-Ko9" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-8" id="d6D-ua-3lF"/>
+                            <constraint firstItem="Djc-ND-g3W" firstAttribute="top" secondItem="5rY-hX-Ko9" secondAttribute="bottom" id="qrO-9I-pMm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" largeTitleDisplayMode="always" id="cjb-b7-eL7"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="searchCollection" destination="Djc-ND-g3W" id="iam-qc-lWY"/>
                         <outlet property="songSearch" destination="5rY-hX-Ko9" id="aJ0-13-WsY"/>
                     </connections>
                 </viewController>
@@ -74,5 +107,8 @@
         <namedColor name="AccentColor">
             <color red="1" green="0.17599999904632568" blue="0.33300000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

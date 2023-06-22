@@ -14,18 +14,28 @@ class FavoritesViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
-    
-    var favorites: [Music] = MusicService.singleton.favoriteMusics
+    var favorites: [Music] = [] {
+        didSet {
+            tableView.isHidden = favorites.isEmpty
+            tableView.reloadSections(IndexSet(integer: 0), with: oldValue != favorites ? .automatic : .none)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        MusicService.singleton.toggleFavorite(music: MusicService.singleton.getAllMusics()[0], isFavorite: true)
-        MusicService.singleton.toggleFavorite(music: MusicService.singleton.getAllMusics()[1], isFavorite: true)
-        MusicService.singleton.toggleFavorite(music: MusicService.singleton.getAllMusics()[2], isFavorite: true)
-        MusicService.singleton.toggleFavorite(music: MusicService.singleton.getAllMusics()[3], isFavorite: true)
+//        MusicService.singleton.toggleFavorite(music: MusicService.singleton.getAllMusics()[0], isFavorite: true)
+//        MusicService.singleton.toggleFavorite(music: MusicService.singleton.getAllMusics()[1], isFavorite: true)
+//        MusicService.singleton.toggleFavorite(music: MusicService.singleton.getAllMusics()[2], isFavorite: true)
         
-        reloadData()
+        favorites = MusicService.singleton.favoriteMusics
+//        MusicService.singleton.toggleFavorite(music: MusicService.singleton.getAllMusics()[3], isFavorite: true)
+//        MusicService.singleton.toggleFavorite(music: MusicService.singleton.getAllMusics()[4], isFavorite: true)
+//        MusicService.singleton.toggleFavorite(music: MusicService.singleton.getAllMusics()[5], isFavorite: true)
+//        MusicService.singleton.toggleFavorite(music: MusicService.singleton.getAllMusics()[6], isFavorite: true)
+//        MusicService.singleton.toggleFavorite(music: MusicService.singleton.getAllMusics()[7], isFavorite: true)
+        
+//        MusicService.singleton.eraseAllFavorites()
         
         if (!favorites.isEmpty) {
             tableView.dataSource = self
@@ -37,26 +47,6 @@ class FavoritesViewController: UIViewController {
         
         
         // Do any additional setup after loading the view.
-    }
-    
-    
-    private func reloadData(with indexPath: IndexPath? = nil) {
-        self.favorites = MusicService.singleton.favoriteMusics
-        
-        //        if let text = searchBar.text {
-        //            searchBar(searchBar, textDidChange: text)
-        //        }
-        
-        if(favorites.isEmpty) {
-            tableView.isHidden = true
-        }
-        
-        if let indexPath {
-            self.tableView.deleteRows(at: [indexPath], with: .left)
-        } else {
-            self.tableView.reloadData()
-        }
-        
     }
     
 }
@@ -96,7 +86,7 @@ extension FavoritesViewController: FavoritesTavleViewCellDelegate {
         let isFavorite = MusicService.singleton.favoriteMusics.contains(music)
         MusicService.singleton.toggleFavorite(music: music, isFavorite: !isFavorite)
         
-        self.reloadData(with: indexPath)
+        favorites.remove(at: indexPath.row)
     }
     
 }
@@ -105,12 +95,21 @@ extension FavoritesViewController: FavoritesTavleViewCellDelegate {
 extension FavoritesViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        favorites = MusicService.singleton.favoriteMusics.filter({ music in
-            music.title.hasPrefix(searchText)
-            
-        })
         
-        tableView.reloadData()
+        if searchText.isEmpty {
+            favorites = MusicService.singleton.favoriteMusics
+        } else {
+            favorites = MusicService.singleton.favoriteMusics.filter({ music in
+                music.title.hasPrefix(searchText)
+            })
+        }
+        
+        // Criar index paths dos índices removidos do Array novo em comparação com o valor anterior
+        //        let indexPaths = previousFavorites
+        //                            .enumerated()
+        //                            .filter{ !favorites.contains($0.element) }
+        //                            .compactMap{ $0.offset }
+        //                            .compactMap{ IndexPath(row: $0, section: 0) }
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

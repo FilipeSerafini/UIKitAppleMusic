@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="170" id="xt6-Xe-fGe" customClass="bigCardTableViewCell" customModule="NanoUIKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="170"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xt6-Xe-fGe" id="bmu-q0-DSa">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="170"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spatial Audio" translatesAutoresizingMaskIntoConstraints="NO" id="JjO-GV-OV1">
+                        <rect key="frame" x="16" y="8" width="318" height="154"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="JjO-GV-OV1" secondAttribute="height" multiplier="159:77" id="CWu-uS-wFd"/>
+                            <constraint firstAttribute="height" constant="154" id="fu3-zj-aHw"/>
+                        </constraints>
+                    </imageView>
+                    <view alpha="0.34999999999999998" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="vl2-iK-PEh">
+                        <rect key="frame" x="16" y="8" width="318" height="154"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Weeknd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oaw-MA-bFE">
+                        <rect key="frame" x="36" y="122" width="101" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="Oaw-MA-bFE" secondAttribute="bottom" constant="16" id="17x-nn-wi9"/>
+                    <constraint firstAttribute="trailing" secondItem="vl2-iK-PEh" secondAttribute="trailing" constant="16" id="8pJ-kd-qhy"/>
+                    <constraint firstAttribute="bottom" secondItem="JjO-GV-OV1" secondAttribute="bottom" constant="8" id="AJw-Qj-XT0"/>
+                    <constraint firstItem="vl2-iK-PEh" firstAttribute="leading" secondItem="bmu-q0-DSa" secondAttribute="leading" constant="16" id="C9k-W7-sPy"/>
+                    <constraint firstAttribute="trailing" secondItem="JjO-GV-OV1" secondAttribute="trailing" constant="16" id="DAZ-SG-aV2"/>
+                    <constraint firstAttribute="bottom" secondItem="vl2-iK-PEh" secondAttribute="bottom" constant="8" id="Go2-Ef-pbE"/>
+                    <constraint firstItem="JjO-GV-OV1" firstAttribute="top" secondItem="bmu-q0-DSa" secondAttribute="top" constant="8" id="Kdw-iE-6YU"/>
+                    <constraint firstItem="vl2-iK-PEh" firstAttribute="top" secondItem="bmu-q0-DSa" secondAttribute="top" constant="8" id="MmQ-wm-WVz"/>
+                    <constraint firstItem="Oaw-MA-bFE" firstAttribute="leading" secondItem="bmu-q0-DSa" secondAttribute="leadingMargin" constant="16" id="eJz-av-E8P"/>
+                    <constraint firstItem="JjO-GV-OV1" firstAttribute="leading" secondItem="bmu-q0-DSa" secondAttribute="leading" constant="16" id="xBd-IT-kdZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="blurCard" destination="vl2-iK-PEh" id="lFR-VW-mYC"/>
+                <outlet property="imageCover" destination="JjO-GV-OV1" id="4hm-34-L5q"/>
+                <outlet property="titleLabel" destination="Oaw-MA-bFE" id="A6N-Tn-BGi"/>
+            </connections>
+            <point key="canvasLocation" x="-117.55725190839694" y="28.169014084507044"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Spatial Audio" width="1050" height="510"/>
+    </resources>
+</document>

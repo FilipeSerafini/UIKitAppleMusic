@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hPB-BQ-vxz" customClass="LibraryCardCollectionViewCell" customModule="NanoUIKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="171" height="213"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ios-MS-nAP">
+                <rect key="frame" x="0.0" y="0.0" width="171" height="213"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="756" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCv-oA-0yE">
+                        <rect key="frame" x="8" y="187" width="37" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" systemColor="systemGrayColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Be6-4i-lFM">
+                        <rect key="frame" x="8" y="169" width="30" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="07K4GcCDSTiXUF5ssyTRUM" translatesAutoresizingMaskIntoConstraints="NO" id="yVc-D3-a8K">
+                        <rect key="frame" x="8" y="8" width="155" height="157"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yVc-D3-a8K" firstAttribute="leading" secondItem="ios-MS-nAP" secondAttribute="leading" constant="8" id="5xg-wF-FMf"/>
+                    <constraint firstAttribute="bottom" secondItem="CCv-oA-0yE" secondAttribute="bottom" constant="8" id="Bxv-DT-36Q"/>
+                    <constraint firstItem="CCv-oA-0yE" firstAttribute="leading" secondItem="ios-MS-nAP" secondAttribute="leading" constant="8" id="DKb-Y7-pHp"/>
+                    <constraint firstItem="Be6-4i-lFM" firstAttribute="leading" secondItem="ios-MS-nAP" secondAttribute="leading" constant="8" id="JoG-sC-lzD"/>
+                    <constraint firstItem="yVc-D3-a8K" firstAttribute="top" secondItem="ios-MS-nAP" secondAttribute="top" constant="8" id="Lsi-46-DeJ"/>
+                    <constraint firstItem="CCv-oA-0yE" firstAttribute="top" secondItem="Be6-4i-lFM" secondAttribute="bottom" id="Uv4-OO-mhB"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CCv-oA-0yE" secondAttribute="trailing" constant="8" id="Wle-9U-Pr8"/>
+                    <constraint firstAttribute="trailing" secondItem="yVc-D3-a8K" secondAttribute="trailing" constant="8" id="dXm-IF-EaX"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Be6-4i-lFM" secondAttribute="trailing" constant="8" id="k2Z-Rq-aK3"/>
+                    <constraint firstItem="Be6-4i-lFM" firstAttribute="top" secondItem="yVc-D3-a8K" secondAttribute="bottom" constant="4" id="xMN-ZP-rqF"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="171" height="213"/>
+            <connections>
+                <outlet property="artistLabel" destination="CCv-oA-0yE" id="ZHm-sm-ftp"/>
+                <outlet property="coverImage" destination="yVc-D3-a8K" id="R9k-cR-XDP"/>
+                <outlet property="titleLabel" destination="Be6-4i-lFM" id="cFy-Jg-QN8"/>
+            </connections>
+            <point key="canvasLocation" x="280.15267175572518" y="22.183098591549296"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="07K4GcCDSTiXUF5ssyTRUM" width="640" height="635"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

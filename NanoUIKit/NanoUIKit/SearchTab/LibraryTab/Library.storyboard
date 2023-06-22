@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -199,7 +199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I1x-zt-d3w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2525" y="-444"/>
+            <point key="canvasLocation" x="2294" y="-744"/>
         </scene>
         <!--Chosen Playlist View Controller-->
         <scene sceneID="Zdh-xG-lTa">
@@ -340,11 +340,22 @@
                         <outlet property="playlistTableView" destination="ssg-5d-t3O" id="DdU-h8-Y9b"/>
                         <outlet property="playlistTitleLabel" destination="a5H-Rp-zRR" id="iCD-UL-Msr"/>
                         <outlet property="shuffleButton" destination="SpG-nC-TF9" id="4b5-JP-OKb"/>
+                        <segue destination="pjU-YT-fbI" kind="show" identifier="chosenPlaylistToMusic" id="fLc-Pt-qcy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHb-cj-jfo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5084.7328244274804" y="-261.26760563380282"/>
+            <point key="canvasLocation" x="6150" y="4"/>
+        </scene>
+        <!--MusicPlaying-->
+        <scene sceneID="oRO-LX-1Yx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MusicPlaying" id="pjU-YT-fbI" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="O92-d2-mWE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O3z-PL-dgf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7602" y="-104"/>
         </scene>
         <!--Songs-->
         <scene sceneID="sME-L4-0o2">
@@ -371,11 +382,12 @@
                     <navigationItem key="navigationItem" title="Songs" largeTitleDisplayMode="never" id="Tsx-ii-o1z"/>
                     <connections>
                         <outlet property="songsTableView" destination="kmP-UH-56L" id="MNd-8T-rqc"/>
+                        <segue destination="pjU-YT-fbI" kind="show" id="3Jx-te-lsR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="119-Mb-ozt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2524" y="725"/>
+            <point key="canvasLocation" x="7208" y="688"/>
         </scene>
         <!--Artists-->
         <scene sceneID="A1x-JZ-iIe">
@@ -409,7 +421,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0cC-gL-OXr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3453" y="4"/>
+            <point key="canvasLocation" x="3416" y="277"/>
         </scene>
         <!--Albums-->
         <scene sceneID="f5U-zQ-O8Q">
@@ -443,7 +455,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nwB-b9-yEI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4400" y="535"/>
+            <point key="canvasLocation" x="4399" y="913"/>
         </scene>
         <!--Library-->
         <scene sceneID="iPs-Qc-BOs">
@@ -472,7 +484,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9OC-u4-eyq"/>
+        <segue reference="fLc-Pt-qcy"/>
+        <segue reference="0Xo-l8-thN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="0EDlULDWMq7mUhj28tvkol" width="640" height="640"/>

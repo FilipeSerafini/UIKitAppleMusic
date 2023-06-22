@@ -16,6 +16,8 @@ class ChosenPlaylistViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var playlistTableView: UITableView!
     @IBOutlet weak var playlistTitleLabel: UILabel!
     
+    var chosenMusic: Music?
+    
     var playlistData: MusicCollection? = MusicService.singleton.getAllCollection(withType: .playlist).randomElement()!
     
     override func viewDidLoad() {
@@ -52,7 +54,13 @@ class ChosenPlaylistViewController: UIViewController, UITableViewDelegate, UITab
             cell.albumDescriptionLabel.numberOfLines = 0
             cell.moreButton.isHidden = true
             tableView.reloadData()
+        } else {
+            chosenMusic = playlistData?.musics[indexPath.row]
+            performSegue(withIdentifier: "chosenPlaylistToMusic", sender: self)
+            
         }
+        
+        
         
     }
     
@@ -85,6 +93,19 @@ class ChosenPlaylistViewController: UIViewController, UITableViewDelegate, UITab
             }
             
             return cell
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "chosenPlaylistToMusic" {
+            guard let navigationController = segue.destination as? UINavigationController else { return }
+            
+            guard let musicPlayingViewController = navigationController.topViewController as? PlayMusicViewController else { return }
+            
+            guard let data = chosenMusic else { return }
+            
+            musicPlayingViewController.currentMusic = data
         }
     }
 }

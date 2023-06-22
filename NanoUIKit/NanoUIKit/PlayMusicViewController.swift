@@ -55,7 +55,6 @@ class PlayMusicViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         prepareLeaveSecondScreen()
         
         if currentMusic == nil{
@@ -80,6 +79,15 @@ class PlayMusicViewController: UIViewController, UITableViewDelegate, UITableVie
         // Adicione o gradiente à camada da view
         view.layer.insertSublayer(gradientLayer, at: 0)
         
+        imageCover.image = UIImage(named: currentMusic!.id)
+        titleLabel.text = currentMusic!.title
+        artistLabel.text = currentMusic!.artist
+        
+        
+//        playlistTableView.delegate = self
+//        playlistTableView.dataSource = self
+//        
+//        playlistTableView.register(UINib(nibName: "FavoritesTableViewCell", bundle: .main), forCellReuseIdentifier: "FavoriteCell")
         playlistTableView.delegate = self
         playlistTableView.dataSource = self
         

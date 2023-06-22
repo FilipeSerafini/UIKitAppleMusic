@@ -13,6 +13,23 @@ class PlayMusicViewController: UIViewController {
     @IBOutlet weak var imageCover: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
+    @IBOutlet weak var progressViewUpper: UIProgressView!
+    @IBOutlet weak var tillEndLabel: UILabel!
+    @IBOutlet weak var startLabel: UILabel!
+    
+    var currentMusic: Music?
+    
+    func prepareLeaveFirstScreen(){
+//        ownerView.isHidden = true
+    }
+    
+    
+    //PlaylistScreen
+    //owner of things under this
+    @IBOutlet weak var playlistView: UIView!
+    //Things that should only appear in playlistScreen
+    @IBOutlet weak var playlistTableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +50,16 @@ class PlayMusicViewController: UIViewController {
 
         // Adicione o gradiente à camada da view
         view.layer.insertSublayer(gradientLayer, at: 0)
+        
+        imageCover.image = UIImage(named: currentMusic!.id)
+        titleLabel.text = currentMusic!.title
+        artistLabel.text = currentMusic!.artist
+        
+        
+//        playlistTableView.delegate = self
+//        playlistTableView.dataSource = self
+//        
+//        playlistTableView.register(UINib(nibName: "FavoritesTableViewCell", bundle: .main), forCellReuseIdentifier: "FavoriteCell")
     }
 
 }

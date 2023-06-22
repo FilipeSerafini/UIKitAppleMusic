@@ -48,6 +48,7 @@
 		F97740062A448DA400E286AC /* AlbumDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97740052A448DA400E286AC /* AlbumDescriptionTableViewCell.swift */; };
 		F97740082A44A82800E286AC /* MusicPlaying.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F97740072A44A82800E286AC /* MusicPlaying.storyboard */; };
 		F977400A2A44B7F700E286AC /* PlayMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97740092A44B7F700E286AC /* PlayMusicViewController.swift */; };
+		F977400C2A44E29A00E286AC /* LyricsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F977400B2A44E29A00E286AC /* LyricsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		F97740052A448DA400E286AC /* AlbumDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		F97740072A44A82800E286AC /* MusicPlaying.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicPlaying.storyboard; sourceTree = "<group>"; };
 		F97740092A44B7F700E286AC /* PlayMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMusicViewController.swift; sourceTree = "<group>"; };
+		F977400B2A44E29A00E286AC /* LyricsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 				F97740072A44A82800E286AC /* MusicPlaying.storyboard */,
 				F97740092A44B7F700E286AC /* PlayMusicViewController.swift */,
 				F97740032A44873900E286AC /* DelegatePlaylistCollection.swift */,
+				F977400B2A44E29A00E286AC /* LyricsTableViewCell.swift */,
 				F92480CD2A43517F0028ADDC /* Browse Tab */,
 				F92480AF2A422F9D0028ADDC /* LibraryTab */,
 				F92480A12A4200E00028ADDC /* SearchTab */,
@@ -416,6 +419,7 @@
 				F92480BF2A422F9D0028ADDC /* LibraryViewController.swift in Sources */,
 				F92480C72A4330CE0028ADDC /* bigCardTableViewCell.swift in Sources */,
 				F97740062A448DA400E286AC /* AlbumDescriptionTableViewCell.swift in Sources */,
+				F977400C2A44E29A00E286AC /* LyricsTableViewCell.swift in Sources */,
 				B16DBD982A40D9C400779B7C /* MusicService.swift in Sources */,
 				F977400A2A44B7F700E286AC /* PlayMusicViewController.swift in Sources */,
 			);

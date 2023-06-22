@@ -8,7 +8,7 @@
 import UIKit
 
 class FavoritesViewController: UIViewController {
-
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,6 +22,8 @@ class FavoritesViewController: UIViewController {
         
         MusicService.singleton.toggleFavorite(music: MusicService.singleton.getAllMusics()[0], isFavorite: true)
         MusicService.singleton.toggleFavorite(music: MusicService.singleton.getAllMusics()[1], isFavorite: true)
+        MusicService.singleton.toggleFavorite(music: MusicService.singleton.getAllMusics()[2], isFavorite: true)
+        MusicService.singleton.toggleFavorite(music: MusicService.singleton.getAllMusics()[3], isFavorite: true)
         
         reloadData()
         
@@ -37,19 +39,26 @@ class FavoritesViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    private func reloadData() {
+    
+    private func reloadData(with indexPath: IndexPath? = nil) {
         self.favorites = MusicService.singleton.favoriteMusics
         
-        if let text = searchBar.text {
-            searchBar(searchBar, textDidChange: text)
+        //        if let text = searchBar.text {
+        //            searchBar(searchBar, textDidChange: text)
+        //        }
+        
+        if(favorites.isEmpty) {
+            tableView.isHidden = true
         }
         
-        DispatchQueue.main.async {
+        if let indexPath {
+            self.tableView.deleteRows(at: [indexPath], with: .left)
+        } else {
             self.tableView.reloadData()
         }
+        
     }
-
+    
 }
 
 // MARK: - UITableViewDataSource
@@ -64,7 +73,7 @@ extension FavoritesViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesCell", for: indexPath) as! FavoritesTableViewCell
         cell.type = .favorite
-    
+        
         
         cell.musicName.text = music.title
         cell.groupName.text = music.artist
@@ -78,21 +87,16 @@ extension FavoritesViewController: UITableViewDataSource {
 
 // MARK: - UIFavoriteTableViewCellDelegate
 extension FavoritesViewController: FavoritesTavleViewCellDelegate {
- 
+    
     func favoriteButtonTapped(cell: FavoritesTableViewCell) {
         guard let indexPath = tableView.indexPath(for: cell) else { return }
         
         let music = favorites[indexPath.row]
         
-        if MusicService.singleton.favoriteMusics.contains(music) {
-            MusicService.singleton.toggleFavorite(music: music, isFavorite: false)
-        }
-        else {
-            MusicService.singleton.toggleFavorite(music: music, isFavorite: true)
-        }
+        let isFavorite = MusicService.singleton.favoriteMusics.contains(music)
+        MusicService.singleton.toggleFavorite(music: music, isFavorite: !isFavorite)
         
-        self.reloadData()
-        
+        self.reloadData(with: indexPath)
     }
     
 }

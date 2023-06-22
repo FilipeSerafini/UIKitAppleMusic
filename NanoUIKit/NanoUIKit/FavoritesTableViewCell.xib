@@ -20,10 +20,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ws2-jN-K92">
-                        <rect key="frame" x="235.33333333333334" y="16" width="50.666666666666657" height="32"/>
+                        <rect key="frame" x="226.66666666666666" y="16" width="59.333333333333343" height="32"/>
                         <color key="tintColor" name="AccentColor"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                        <buttonConfiguration key="configuration" style="plain" image="person.2.wave.2" catalog="system"/>
                         <connections>
                             <action selector="buttonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="QHM-cF-gNs"/>
                         </connections>
@@ -76,7 +76,7 @@
     </objects>
     <resources>
         <image name="0894b194d069c358c04e" width="300" height="300"/>
-        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="person.2.wave.2" catalog="system" width="128" height="83"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.17599999904632568" blue="0.33300000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

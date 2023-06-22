@@ -257,6 +257,7 @@
                             <constraint firstItem="Crt-wz-PQD" firstAttribute="height" secondItem="zlw-xV-Ehv" secondAttribute="height" id="D82-qP-Btt"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gWN-QT-5Hx" secondAttribute="trailing" constant="64" id="Dxj-b3-qHo"/>
                             <constraint firstItem="zX4-aF-w5I" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="EYp-nO-qob"/>
+                            <constraint firstItem="gWN-QT-5Hx" firstAttribute="top" secondItem="zX4-aF-w5I" secondAttribute="bottom" id="FHX-Ws-NSW"/>
                             <constraint firstItem="zX4-aF-w5I" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="J6w-dY-b0m"/>
                             <constraint firstItem="KvI-hD-S7s" firstAttribute="top" secondItem="kac-o2-zwB" secondAttribute="bottom" constant="32" id="JeX-pa-3AW"/>
                             <constraint firstItem="Crt-wz-PQD" firstAttribute="leading" secondItem="kac-o2-zwB" secondAttribute="trailing" id="Jqy-R7-7rd"/>
@@ -277,13 +278,9 @@
                             <constraint firstItem="PAK-Pp-dAZ" firstAttribute="top" secondItem="R4Y-On-Gje" secondAttribute="bottom" constant="8" id="lnN-MB-jpe"/>
                             <constraint firstItem="PAK-Pp-dAZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="mlK-gg-3h6"/>
                             <constraint firstItem="DfM-He-K24" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="oHg-L0-A5R"/>
+                            <constraint firstItem="zX4-aF-w5I" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ofH-b5-PwG"/>
                             <constraint firstItem="PCU-bu-4zA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="vfY-cW-sZK"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="zX4-aF-w5I"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Playing" id="x3p-OZ-10f"/>
                     <connections>

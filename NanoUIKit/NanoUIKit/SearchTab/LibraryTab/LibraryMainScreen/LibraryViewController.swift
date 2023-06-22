@@ -9,7 +9,22 @@ import UIKit
 
 
 //IMPORTANTE: Ainda falta o delegate da selecao dentro da collection, que n vou fazer ainda p n ficar maluco.
-class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DelegatePlaylistCollection {
+    
+    var playlistToCollection: MusicCollection? = nil
+    
+    //Referente ao delegate do PlaylistCollection
+    func performDelegate(playlist: MusicCollection) {
+        playlistToCollection = playlist
+        performSegue(withIdentifier: "MainPlaylistSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MainPlaylistSegue"{
+            let destination = segue.destination as! ChosenPlaylistViewController
+            destination.playlistData = playlistToCollection
+        }
+    }
     
     var data: (category: [MusicCollectionType],header: String, playlist: [MusicCollection])  = ([.playlist, .artists, .album, .songs],"Header aqui", MusicService.singleton.loadLibrary())
     
@@ -48,6 +63,9 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             //configure
             cell.data = data.playlist
+            
+            //set delegate
+            cell.delegate = self
             
             //remove o divider
             cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)

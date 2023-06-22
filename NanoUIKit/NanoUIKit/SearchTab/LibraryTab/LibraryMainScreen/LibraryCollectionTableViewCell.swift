@@ -11,6 +11,8 @@ class LibraryCollectionTableViewCell: UITableViewCell, UICollectionViewDelegate,
 
     @IBOutlet weak var cardCollection: UICollectionView!
     
+    var delegate: DelegatePlaylistCollection?
+    
     var data: [MusicCollection] = []
     
     override func awakeFromNib() {
@@ -63,6 +65,10 @@ class LibraryCollectionTableViewCell: UITableViewCell, UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         // Definindo o espaçamento vertical entre as células
         return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.performDelegate(playlist: data[indexPath.row])
     }
     
 }

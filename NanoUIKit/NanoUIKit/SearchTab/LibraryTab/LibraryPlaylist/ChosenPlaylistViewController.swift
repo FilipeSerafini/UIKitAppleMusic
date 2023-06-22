@@ -15,7 +15,6 @@ class ChosenPlaylistViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var shuffleButton: UIButton!
     @IBOutlet weak var playlistTableView: UITableView!
     @IBOutlet weak var playlistTitleLabel: UILabel!
-    @IBOutlet weak var moreLabel: UILabel!
     
     var playlistData: MusicCollection? = MusicService.singleton.getAllCollection(withType: .playlist).randomElement()!
     
@@ -26,16 +25,6 @@ class ChosenPlaylistViewController: UIViewController, UITableViewDelegate, UITab
             imageCover.cornerRadius(20, forCorners: [.all])
             
             playlistTitleLabel.text = chosenPlaylist.title
-            
-            if let description = chosenPlaylist.albumArtistDescription{
-                albumDescriptionLabel.text = description
-            } else if let descriptionAlbum = chosenPlaylist.albumDescription{
-                albumDescriptionLabel.text = descriptionAlbum
-            } else {
-                moreLabel.text = ""
-                albumDescriptionLabel.text = ""
-            }
-            
         }
         
         //imageCover.cornerRadius(12, forCorners: [.all])
@@ -53,19 +42,49 @@ class ChosenPlaylistViewController: UIViewController, UITableViewDelegate, UITab
         playlistTableView.register(UINib(nibName: "FavoritesTableViewCell", bundle: .main), forCellReuseIdentifier: "FavoritesCell")
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        2
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0{
+            let cell = tableView.cellForRow(at: indexPath) as! AlbumDescriptionTableViewCell
+            cell.albumDescriptionLabel.numberOfLines = 0
+            cell.moreButton.isHidden = true
+            tableView.reloadData()
+        }
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        playlistData!.musics.count
+        section == 0 ? 1 : playlistData!.musics.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesCell", for: indexPath) as! FavoritesTableViewCell
-        
-        let music = playlistData!.musics[indexPath.row]
-        cell.groupName.text = music.artist
-        cell.musicImage.image = UIImage(named: music.id)
-        cell.musicName.text = music.title
-        cell.rightButton.image = UIImage(systemName: "chevron.right")!
-        
-        return cell
+        if indexPath.section == 1{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesCell", for: indexPath) as! FavoritesTableViewCell
+            
+            let music = playlistData!.musics[indexPath.row]
+            cell.groupName.text = music.artist
+            cell.musicImage.image = UIImage(named: music.id)
+            cell.musicName.text = music.title
+            cell.rightButton.image = UIImage(systemName: "chevron.right")!
+            
+            return cell
+            
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumDescriptionCell", for: indexPath) as! AlbumDescriptionTableViewCell
+            
+            let chosenPlaylist = playlistData!
+            if let description = chosenPlaylist.albumArtistDescription {
+                cell.albumDescriptionLabel.text = description
+            } else if let descriptionAlbum = chosenPlaylist.albumDescription{
+                cell.albumDescriptionLabel.text = descriptionAlbum
+            } else {
+                cell.shouldShow = false
+            }
+            
+            return cell
+        }
     }
 }

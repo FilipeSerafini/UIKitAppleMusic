@@ -8,6 +8,13 @@
 import Foundation
 import UIKit
 
+extension Sequence where Element: Hashable {
+    func uniqued() -> [Element] {
+        var set = Set<Element>()
+        return filter { set.insert($0).inserted }
+    }
+}
+
 // MARK: - Music
 struct Music: Hashable, Decodable {
     let id: String
@@ -108,6 +115,16 @@ struct MusicCollection: Hashable, Decodable {
     }
 }
 
+//▿ 8 elements
+//  - 0 : "6cefd031a54def8165de"
+//  - 1 : "bb768c6071bad2da382a"
+//  - 2 : "cbd2a7946da5cff61f62"
+//  - 3 : "2eee9ae4dc6dd25835f8"
+//  - 4 : "851d796d317c97c441ee"
+//  - 5 : "eee98fbfdfde1eeb0c08"
+//  - 6 : "b2a5af6b38a1ada89786"
+//  - 7 : "36950023a75a3ac90610"
+
 // MARK: - Queue
 struct Queue {
     /// Current playing song, if there is any
@@ -144,7 +161,7 @@ final class MusicService {
             }
         }
         set {
-            let musicsIDs = newValue.map(\.id)
+            let musicsIDs = newValue.map(\.id).uniqued()
             UserDefaults.standard.set(musicsIDs, forKey: "favorite-musics-ids")
         }
     }
@@ -163,6 +180,7 @@ final class MusicService {
         decoder.dateDecodingStrategy = .iso8601
         self.collections = try decoder.decode(Set<MusicCollection>.self, from: data)
         self.allMusics = collections.flatMap(\.musics)
+            .sorted(by: { $0.artist < $1.artist }) // Extra
         
         self.queue = Queue(nowPlaying: nil, collection: nil, nextInCollection: [], nextSuggested: [])
     }
@@ -209,6 +227,10 @@ final class MusicService {
     ///
     func getAllMusics() -> [Music] {
         return self.allMusics
+    }
+    
+    func eraseAllFavorites() {
+        favoriteMusics = []
     }
     
     //MARK: Remove from collection

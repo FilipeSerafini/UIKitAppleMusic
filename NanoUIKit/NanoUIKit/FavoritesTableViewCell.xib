@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -19,6 +19,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="302" height="64"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ws2-jN-K92">
+                        <rect key="frame" x="226.66666666666666" y="15.000000000000004" width="59.333333333333343" height="34.333333333333343"/>
+                        <color key="tintColor" name="AccentColor"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="person.2.wave.2" catalog="system"/>
+                        <connections>
+                            <action selector="buttonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="QHM-cF-gNs"/>
+                        </connections>
+                    </button>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Yaw-id-E66">
                         <rect key="frame" x="72" y="10.333333333333332" width="94.666666666666686" height="43.333333333333343"/>
                         <subviews>
@@ -42,20 +51,15 @@
                             <constraint firstAttribute="width" constant="48" id="WRT-Ry-7Uz"/>
                         </constraints>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ckv-fb-DPO">
-                        <rect key="frame" x="265.33333333333331" y="18" width="20.666666666666686" height="29"/>
-                        <color key="tintColor" name="AccentColor"/>
-                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ws2-jN-K92" secondAttribute="trailing" constant="16" id="KQ6-5A-Gmu"/>
                     <constraint firstItem="oOr-qf-H5J" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Spv-2R-HuF"/>
-                    <constraint firstItem="ckv-fb-DPO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="gY1-CZ-96F"/>
                     <constraint firstItem="Yaw-id-E66" firstAttribute="leading" secondItem="oOr-qf-H5J" secondAttribute="trailing" constant="8" id="i4W-lF-aPJ"/>
-                    <constraint firstAttribute="trailing" secondItem="ckv-fb-DPO" secondAttribute="trailing" constant="16" id="iTs-4t-Sm8"/>
                     <constraint firstAttribute="bottom" secondItem="oOr-qf-H5J" secondAttribute="bottom" constant="8" id="jA7-SH-2yP"/>
-                    <constraint firstItem="ckv-fb-DPO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Yaw-id-E66" secondAttribute="trailing" constant="16" id="jN4-xT-XLQ"/>
                     <constraint firstItem="oOr-qf-H5J" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="qhm-ko-flj"/>
-                    <constraint firstAttribute="bottom" secondItem="ckv-fb-DPO" secondAttribute="bottom" constant="16" id="vRV-zX-IL9"/>
+                    <constraint firstItem="ws2-jN-K92" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wpb-Y7-Qwe"/>
+                    <constraint firstItem="ws2-jN-K92" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Yaw-id-E66" secondAttribute="trailing" constant="8" id="xbC-Ba-h6p"/>
                     <constraint firstItem="Yaw-id-E66" firstAttribute="centerY" secondItem="oOr-qf-H5J" secondAttribute="centerY" id="zUI-ul-YBo"/>
                 </constraints>
             </tableViewCellContentView>
@@ -64,14 +68,14 @@
                 <outlet property="groupName" destination="o1W-aS-92z" id="waT-6o-qr8"/>
                 <outlet property="musicImage" destination="oOr-qf-H5J" id="7Uu-BP-Xfg"/>
                 <outlet property="musicName" destination="x0Q-kZ-iol" id="6dv-XD-w3U"/>
-                <outlet property="rightButton" destination="ckv-fb-DPO" id="5jj-ch-lvo"/>
+                <outlet property="rightButton" destination="ws2-jN-K92" id="IyU-Gc-aRs"/>
             </connections>
             <point key="canvasLocation" x="-54.961832061068698" y="27.464788732394368"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="0894b194d069c358c04e" width="300" height="300"/>
-        <image name="heart.fill" catalog="system" width="128" height="107"/>
+        <image name="person.2.wave.2" catalog="system" width="128" height="83"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.17599999904632568" blue="0.33300000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

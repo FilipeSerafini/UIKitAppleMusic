@@ -11,20 +11,24 @@ enum CellType {
     case favorite, normal
 }
 
+protocol FavoritesTavleViewCellDelegate {
+    func favoriteButtonTapped(cell: FavoritesTableViewCell)
+}
+
 class FavoritesTableViewCell: UITableViewCell {
     
+    var delegate: FavoritesTavleViewCellDelegate?
     
     @IBOutlet weak var musicName: UILabel!
     @IBOutlet weak var groupName: UILabel!
     
-    @IBOutlet weak var rightButton: UIImageView!
+    @IBOutlet weak var rightButton: UIButton!
     
     @IBOutlet weak var musicImage: UIImageView!
     
     var type: CellType = .normal {
         didSet {
-            rightButton.image = UIImage(systemName: type == .normal ? "chevron.right" : "heart.fill")?.withTintColor(type == .normal ? .gray : UIColor(named: "AccentColor")!)
-            
+            rightButton.setImage(UIImage(systemName: type == .normal ? "chevron.right" : "heart.fill"), for: .normal)
         }
     }
 
@@ -38,6 +42,10 @@ class FavoritesTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func buttonAction(_ sender: Any) {
+        delegate?.favoriteButtonTapped(cell: self)
     }
     
 }

@@ -68,7 +68,7 @@ class ChosenPlaylistViewController: UIViewController, UITableViewDelegate, UITab
             cell.groupName.text = music.artist
             cell.musicImage.image = UIImage(named: music.id)
             cell.musicName.text = music.title
-            cell.rightButton.image = UIImage(systemName: "chevron.right")!
+            cell.type = .normal
             
             return cell
             

@@ -7,9 +7,10 @@
 
 import UIKit
 
-class PlayMusicViewController: UIViewController {
+class PlayMusicViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
+    //FirstScreen
     //owner of things under this
     @IBOutlet weak var ownerView: UIView!
     //Things that sould only appear on first screen
@@ -25,8 +26,11 @@ class PlayMusicViewController: UIViewController {
     }
     
     
-    
-    
+    //PlaylistScreen
+    //owner of things under this
+    @IBOutlet weak var playlistView: UIView!
+    //Things that should only appear in playlistScreen
+    @IBOutlet weak var playlistTableView: UITableView!
     
     
     override func viewDidLoad() {
@@ -49,6 +53,11 @@ class PlayMusicViewController: UIViewController {
 
         // Adicione o gradiente à camada da view
         view.layer.insertSublayer(gradientLayer, at: 0)
+        
+        playlistTableView.delegate = self
+        playlistTableView.dataSource = self
+        
+        playlistTableView.register(UINib(nibName: "FavoritesTableViewCell", bundle: .main), forCellReuseIdentifier: "FavoriteCell")
     }
-
+    
 }

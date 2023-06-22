@@ -77,12 +77,57 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="499"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zdt-0e-YdE">
-                                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="66" id="zdt-0e-YdE">
+                                                <rect key="frame" x="0.0" y="50" width="393" height="66"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zdt-0e-YdE" id="oXj-Xz-URs">
-                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="66"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btk-Y0-bl9">
+                                                            <rect key="frame" x="204.33333333333337" y="16.000000000000004" width="160.66666666666663" height="34.333333333333343"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtU-kw-HVZ">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="53.666666666666664" height="34.333333333333336"/>
+                                                                    <color key="tintColor" systemColor="systemGrayColor"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain" image="shuffle" catalog="system"/>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2d-7X-yDE">
+                                                                    <rect key="frame" x="53.666666666666657" y="0.0" width="51.666666666666657" height="34.333333333333336"/>
+                                                                    <color key="tintColor" systemColor="systemGrayColor"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain" image="repeat" catalog="system"/>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFE-E1-VpW">
+                                                                    <rect key="frame" x="105.33333333333333" y="0.0" width="55.333333333333329" height="34.333333333333336"/>
+                                                                    <color key="tintColor" systemColor="systemGrayColor"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain" image="infinity" catalog="system"/>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playing Next" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46A-b9-46a">
+                                                            <rect key="frame" x="36" y="19" width="102" height="20.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lX9-kP-Udt">
+                                                            <rect key="frame" x="36" y="39.333333333333336" width="33" height="15.666666666666664"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" systemColor="systemGrayColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="btk-Y0-bl9" firstAttribute="centerY" secondItem="oXj-Xz-URs" secondAttribute="centerY" id="CDX-ip-W6I"/>
+                                                        <constraint firstItem="46A-b9-46a" firstAttribute="top" secondItem="oXj-Xz-URs" secondAttribute="topMargin" constant="8" id="KBW-2J-kwp"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="btk-Y0-bl9" secondAttribute="trailing" constant="8" id="Ns0-rG-Ate"/>
+                                                        <constraint firstItem="lX9-kP-Udt" firstAttribute="top" secondItem="46A-b9-46a" secondAttribute="bottom" id="VnL-N4-3eR"/>
+                                                        <constraint firstItem="lX9-kP-Udt" firstAttribute="leading" secondItem="oXj-Xz-URs" secondAttribute="leadingMargin" constant="16" id="YJH-qT-M5q"/>
+                                                        <constraint firstItem="46A-b9-46a" firstAttribute="leading" secondItem="oXj-Xz-URs" secondAttribute="leadingMargin" constant="16" id="bUh-99-Gig"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
@@ -199,6 +244,8 @@
                         <outlet property="artistLabel" destination="PCU-bu-4zA" id="1md-gC-QoZ"/>
                         <outlet property="imageCover" destination="DfM-He-K24" id="koW-de-hTy"/>
                         <outlet property="ownerView" destination="qvB-HA-BsI" id="RZq-Bx-nnt"/>
+                        <outlet property="playlistTableView" destination="Kpl-FI-5gh" id="6av-OT-cxy"/>
+                        <outlet property="playlistView" destination="zX4-aF-w5I" id="Gm6-3j-BNt"/>
                         <outlet property="progressViewUpper" destination="R4Y-On-Gje" id="58l-6t-PLi"/>
                         <outlet property="startLabel" destination="PAK-Pp-dAZ" id="swr-DS-lbv"/>
                         <outlet property="tillEndLabel" destination="wBs-iV-iMt" id="eGz-gr-dW7"/>
@@ -233,8 +280,11 @@
         <image name="airplayaudio" catalog="system" width="128" height="123"/>
         <image name="buttonSong" width="771" height="105"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
+        <image name="infinity" catalog="system" width="128" height="63"/>
         <image name="list.bullet" catalog="system" width="128" height="87"/>
         <image name="quote.bubble" catalog="system" width="128" height="110"/>
+        <image name="repeat" catalog="system" width="128" height="98"/>
+        <image name="shuffle" catalog="system" width="128" height="95"/>
         <image name="volume.3.fill" catalog="system" width="128" height="84"/>
         <image name="volume.fill" catalog="system" width="128" height="125"/>
         <namedColor name="AccentColor">

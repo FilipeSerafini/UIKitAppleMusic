@@ -9,11 +9,13 @@ import UIKit
 
 class ChosenPlaylistViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var albumDescriptionLabel: UILabel!
     @IBOutlet weak var imageCover: UIImageView!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var shuffleButton: UIButton!
     @IBOutlet weak var playlistTableView: UITableView!
     @IBOutlet weak var playlistTitleLabel: UILabel!
+    @IBOutlet weak var moreLabel: UILabel!
     
     var playlistData: MusicCollection? = MusicService.singleton.getAllCollection(withType: .playlist).randomElement()!
     
@@ -24,6 +26,16 @@ class ChosenPlaylistViewController: UIViewController, UITableViewDelegate, UITab
             imageCover.cornerRadius(20, forCorners: [.all])
             
             playlistTitleLabel.text = chosenPlaylist.title
+            
+            if let description = chosenPlaylist.albumArtistDescription{
+                albumDescriptionLabel.text = description
+            } else if let descriptionAlbum = chosenPlaylist.albumDescription{
+                albumDescriptionLabel.text = descriptionAlbum
+            } else {
+                moreLabel.text = ""
+                albumDescriptionLabel.text = ""
+            }
+            
         }
         
         //imageCover.cornerRadius(12, forCorners: [.all])

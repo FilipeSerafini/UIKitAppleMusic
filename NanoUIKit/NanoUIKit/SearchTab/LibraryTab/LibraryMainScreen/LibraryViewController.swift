@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+//IMPORTANTE: Ainda falta o delegate da selecao dentro da collection, que n vou fazer ainda p n ficar maluco.
 class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var data: (category: [MusicCollectionType],header: String, playlist: [MusicCollection])  = ([.playlist, .artists, .album, .songs],"Header aqui", MusicService.singleton.loadLibrary())

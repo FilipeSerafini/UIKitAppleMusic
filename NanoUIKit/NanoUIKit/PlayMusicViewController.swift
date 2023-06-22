@@ -7,8 +7,8 @@
 
 import UIKit
 
-class PlayMusicViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+class PlayMusicViewController: UIViewController {
+//, UITableViewDelegate, UITableViewDataSource
     
     //FirstScreen
     //owner of things under this
@@ -54,10 +54,10 @@ class PlayMusicViewController: UIViewController, UITableViewDelegate, UITableVie
         // Adicione o gradiente à camada da view
         view.layer.insertSublayer(gradientLayer, at: 0)
         
-        playlistTableView.delegate = self
-        playlistTableView.dataSource = self
-        
-        playlistTableView.register(UINib(nibName: "FavoritesTableViewCell", bundle: .main), forCellReuseIdentifier: "FavoriteCell")
+//        playlistTableView.delegate = self
+//        playlistTableView.dataSource = self
+//        
+//        playlistTableView.register(UINib(nibName: "FavoritesTableViewCell", bundle: .main), forCellReuseIdentifier: "FavoriteCell")
     }
     
 }

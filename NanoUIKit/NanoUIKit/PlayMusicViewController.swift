@@ -177,11 +177,14 @@ class PlayMusicViewController: UIViewController, UITableViewDelegate, UITableVie
             prepareLeaveSecondScreen()
             goToFirstScren()
             currentState = .main
+            playlistButton.setImage(UIImage(systemName: "list.bullet"), for: .normal)
         } else {
             prepareLeaveFirstScreen()
             goToPlaylistScreen()
             currentState = .playlist
             playlistTableView.reloadData()
+            playlistButton.setImage(UIImage(named: "list"), for: .normal)
+            lyricsButton.setImage(UIImage(systemName: "quote.bubble"), for: .normal)
         }
     }
     
@@ -194,12 +197,14 @@ class PlayMusicViewController: UIViewController, UITableViewDelegate, UITableVie
             goToFirstScren()
             currentState = .main
             lyricsButton.setImage(UIImage(systemName: "quote.bubble"), for: .normal)
+            playlistButton.setImage(UIImage(systemName: "list.bullet"), for: .normal)
         } else {
             prepareLeaveFirstScreen()
             goToPlaylistScreen()
             currentState = .lyrics
             playlistTableView.reloadData()
-            lyricsButton.setImage(UIImage(named: "Subtract 1"), for: .normal)
+            lyricsButton.setImage(UIImage(named: "quote"), for: .normal)
+            playlistButton.setImage(UIImage(systemName: "list.bullet"), for: .normal)
         }
     }
     

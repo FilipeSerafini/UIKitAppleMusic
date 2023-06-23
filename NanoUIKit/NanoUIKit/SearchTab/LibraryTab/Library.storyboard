@@ -382,7 +382,7 @@
                     <navigationItem key="navigationItem" title="Songs" largeTitleDisplayMode="never" id="Tsx-ii-o1z"/>
                     <connections>
                         <outlet property="songsTableView" destination="kmP-UH-56L" id="MNd-8T-rqc"/>
-                        <segue destination="pjU-YT-fbI" kind="show" id="3Jx-te-lsR"/>
+                        <segue destination="pjU-YT-fbI" kind="show" identifier="songsToMusic" id="3Jx-te-lsR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="119-Mb-ozt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -484,7 +484,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fLc-Pt-qcy"/>
+        <segue reference="3Jx-te-lsR"/>
         <segue reference="0Xo-l8-thN"/>
     </inferredMetricsTieBreakers>
     <resources>

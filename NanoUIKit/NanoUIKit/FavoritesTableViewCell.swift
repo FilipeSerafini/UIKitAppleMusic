@@ -28,7 +28,9 @@ class FavoritesTableViewCell: UITableViewCell {
     
     var type: CellType = .normal {
         didSet {
-            rightButton.setImage(UIImage(systemName: type == .normal ? "chevron.right" : type == .favorite ? "heart.fill" : "line.3.horizontal")?.withTintColor(type == .favorite ? UIColor(named: "AccentColor")! : .systemGray), for: .normal)
+        let image = UIImage(systemName: type == .normal ? "chevron.right" : type == .favorite ? "heart.fill" : "line.3.horizontal")
+        rightButton.setImage(image, for: .normal)
+        rightButton.tintColor = type == .favorite ? UIColor(named: "AccentColor")! : .systemGray
         }
     }
 

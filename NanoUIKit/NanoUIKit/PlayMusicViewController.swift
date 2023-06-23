@@ -29,6 +29,19 @@ class PlayMusicViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var tillEndLabel: UILabel!
     @IBOutlet weak var startLabel: UILabel!
     
+    @IBOutlet weak var favoriteButton: UIButton!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        favoriteButton.setImage(UIImage(systemName:MusicService.singleton.favoriteMusics.contains(currentMusic!) ? "heart.fill" : "heart"), for: .normal)
+    }
+    
+    @IBAction func favortieButtonTapped(_ sender: Any) {
+        
+        let isFavorite = MusicService.singleton.favoriteMusics.contains(currentMusic!)
+        MusicService.singleton.toggleFavorite(music: currentMusic!, isFavorite: !isFavorite)
+        favoriteButton.setImage(UIImage(systemName:MusicService.singleton.favoriteMusics.contains(currentMusic!) ? "heart.fill" : "heart"), for: .normal)
+    }
+    
     
     func prepareLeaveFirstScreen(){
         ownerView.isHidden = true

@@ -83,11 +83,7 @@ class PlayMusicViewController: UIViewController, UITableViewDelegate, UITableVie
         titleLabel.text = currentMusic!.title
         artistLabel.text = currentMusic!.artist
         
-        
-//        playlistTableView.delegate = self
-//        playlistTableView.dataSource = self
-//        
-//        playlistTableView.register(UINib(nibName: "FavoritesTableViewCell", bundle: .main), forCellReuseIdentifier: "FavoriteCell")
+    
         playlistTableView.delegate = self
         playlistTableView.dataSource = self
         
@@ -130,7 +126,7 @@ class PlayMusicViewController: UIViewController, UITableViewDelegate, UITableVie
             default:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath) as! FavoritesTableViewCell
                 
-                cell.type = .normal
+                cell.type = .lyricsCell
                 
                 let music = fullPlaylist.musics[indexPath.row + 1]
                 cell.musicImage.image = UIImage(named: music.id)
@@ -154,7 +150,7 @@ class PlayMusicViewController: UIViewController, UITableViewDelegate, UITableVie
                 let cell = tableView.dequeueReusableCell(withIdentifier: "LyricsCell", for: indexPath) as! LyricsTableViewCell
                 
                 let text = lyrics[indexPath.row]
-                let opacity = 1.0 - (0.3334 * Double(indexPath.row))
+                let opacity = 1 / Double(indexPath.row+1)
                 
                 cell.lyricsLabel.text = text
                 cell.lyricsLabel.layer.opacity = Float(opacity)
@@ -190,16 +186,20 @@ class PlayMusicViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     
+    @IBOutlet weak var lyricsButton: UIButton!
+    
     @IBAction func lyricsToggle(_ sender: Any) {
         if currentState == .lyrics {
             prepareLeaveSecondScreen()
             goToFirstScren()
             currentState = .main
+            lyricsButton.setImage(UIImage(systemName: "quote.bubble"), for: .normal)
         } else {
             prepareLeaveFirstScreen()
             goToPlaylistScreen()
             currentState = .lyrics
             playlistTableView.reloadData()
+            lyricsButton.setImage(UIImage(named: "Subtract 1"), for: .normal)
         }
     }
     

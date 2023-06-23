@@ -8,7 +8,7 @@
 import UIKit
 
 enum CellType {
-    case favorite, normal
+    case favorite, normal, lyricsCell
 }
 
 protocol FavoritesTavleViewCellDelegate {
@@ -28,7 +28,7 @@ class FavoritesTableViewCell: UITableViewCell {
     
     var type: CellType = .normal {
         didSet {
-            rightButton.setImage(UIImage(systemName: type == .normal ? "chevron.right" : "heart.fill"), for: .normal)
+            rightButton.setImage(UIImage(systemName: type == .normal ? "chevron.right" : type == .favorite ? "heart.fill" : "line.3.horizontal")?.withTintColor(type == .favorite ? UIColor(named: "AccentColor")! : .systemGray), for: .normal)
         }
     }
 
